@@ -1,25 +1,15 @@
 import {
-  FC,
   MutableRefObject,
   useEffect,
   useState,
   useRef,
 } from 'react';
 import './App.css';
+import BuildingFeatures from './BuildingFeatures';
 import H2 from './H2';
+import Header from './Header';
 import HeroSection from './HeroSection';
 import Supertitle from './Supertitle';
-
-const RegisterButton: FC<{ children: string }> = props =>
-  <button className='border-primary-light border ml-3 py-1 px-3 text-primary-light' {...props} />
-
-const NavLink: FC<{ active?: boolean, children: string }> = ({ active, ...rest }) => {
-  const colour = active ? 'text-primary' : 'text-primary-light'
-  return <a className='text-base text-primary-light ml-3' {...rest} />
-}
-
-const Wordmark: FC = () =>
-  <h1 className='py-2 px-4 text-white border-white border text-base uppercase tracking-widest'>Purcell Business Center</h1>
 
 interface Section {
   containerRef: MutableRefObject<HTMLDivElement | null>,
@@ -98,40 +88,26 @@ function App() {
           </div>
         </div>
       </aside>
-      <header className='bg-primary-dark'>
-        <div className='py-4 container flex w-full mx-auto items-center justify-between'>
-          <Wordmark />
-          <nav className='flex items-center'>
-            <NavLink>Home</NavLink>
-            <NavLink>Building Features</NavLink>
-            <NavLink>Location</NavLink>
-            <NavLink>Value Proposition</NavLink>
-            <NavLink>Ownership</NavLink>
-            <NavLink>Financing</NavLink>
-            <NavLink>Project Team</NavLink>
-            <RegisterButton>Register Now</RegisterButton>
-          </nav>
-        </div>
-      </header>
+      <Header />
       <HeroSection ref={homeRef} />
       <div className='w-full flex' style={{
         backgroundColor: '#1C1C1C',
-        backgroundImage: `url(/img/purcell-hero.png)`,
+        backgroundImage: `url(/img/purcell-business-center.png)`,
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'right top',
-        backgroundSize: '50% auto',
+        backgroundSize: '50% 100%',
       }}>
         <div className='container mx-auto'>
-          <div className='w-1/2 py-12 space-y-4'>
+          <div className='w-full lg:w-1/2 py-24 space-y-8'>
             <div className='space-y-3'>
               <Supertitle>
                 Nelson, BC
               </Supertitle>
               <H2>1155 Insight Drive</H2>
             </div>
-            <p className='text-white text-base max-w-prose'>
+            <p className='text-white text-base max-w-[32em]'>
               <span className='font-bold'>Purcell Business Center </span>
-              represents the highest quality flex-industrial real estate offering in the Kootenays, comprising of 16 thoughtfully designed units ranging in size from 2,470 to 7,778 SF. Redeveloped by Macdonald Developmeny Corporation, and using 100% local builders, tradespeople and design consultants, Purcell Business Center marks an exceptionally rate opportunity to own the most highly functional and well located industrial real estate with complementary office and retail potential in the region.
+              represents the highest quality flex-industrial real estate offering in the Kootenays, comprising of 16 thoughtfully designed units ranging in size from 2,470 to 7,778 SF. Redeveloped by Macdonald Communities Limited, and using 100% local builders, tradespeople and design consultants, Purcell Business Center marks an exceptionally rate opportunity to own the most highly functional and well located industrial real estate with complementary office and retail potential in the region.
             </p>
             <div>
               <p className='text-white text-base mt-4'>
@@ -143,9 +119,22 @@ function App() {
                 See Unit Plans
               </p>
             </div>
+            <div>&nbsp;</div>
+            <div className='flex'>
+              <button className='bg-brand uppercase px-4 py-2 tracking-wide mr-4'>Download bruchure</button>
+              <button className='bg-brand uppercase px-4 py-2 tracking-wide'>Download unit plans</button>
+            </div>
           </div>
         </div>
       </div>
+      <div><h1>Video</h1></div>
+      <BuildingFeatures ref={featuresRef} />
+      <div className='h-[400px]' style={{
+        backgroundImage: `url(/img/purcell-business-center-cross-section.png)`,
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+      }}></div>
     </div>
   );
 }
