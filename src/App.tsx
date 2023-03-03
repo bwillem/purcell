@@ -9,7 +9,9 @@ import BuildingFeatures from './BuildingFeatures';
 import H2 from './H2';
 import Header from './Header';
 import HeroSection from './HeroSection';
+import Li from './Li';
 import Supertitle from './Supertitle';
+import Ul from './Ul';
 
 interface Section {
   containerRef: MutableRefObject<HTMLDivElement | null>,
@@ -127,7 +129,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div><h1>Video</h1></div>
+      <div><h1 className='text-center py-24'>Video</h1></div>
       <BuildingFeatures ref={featuresRef} />
       <div className='h-[400px]' style={{
         backgroundImage: `url(/img/purcell-business-center-cross-section.png)`,
@@ -135,6 +137,64 @@ function App() {
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}></div>
+      <div className='bg-primary-dark'>
+        <div className='container flex mx-auto py-24 align-center'>
+          <H2 className='w-1/3 pr-4'>Combining 22’-clear warehouse, with potential office or storefront space within each unit, Purcell Business Centre offers businesses the broadest range of potential uses, including:</H2>
+          <div className='w-1/3 px-2 max-w-prose'>
+            <Ul>
+              <Li>
+                Industrial Services
+              </Li>
+              <Li>
+                Building & Construction Supply
+              </Li>
+              <Li>
+                Food & Beverage Processing
+              </Li>
+              <Li>
+                Material Manufacturing
+              </Li>
+              <Li>
+                E-Commerce
+              </Li>
+              <Li>
+                Fitness & Athletics
+              </Li>
+              <Li>
+                Recreational Equipment Sales & Storage
+              </Li>
+              <Li>
+                Auto Services & Parts
+              </Li>
+            </Ul>
+          </div>
+          <div className='w-1/3 px-2 max-w-prose'>
+            <Ul>
+              <Li>
+                Retail & Wholesaling
+              </Li>
+              <Li>
+                Home Business Expansion
+              </Li>
+              <Li>
+                Technology & Telecommunications
+              </Li>
+              <Li>
+                Professional Office
+              </Li>
+              <Li>
+                Personal & Business Storage
+              </Li>
+              <Li>
+                Commissary Kitchen
+              </Li>
+              <Li>
+                Distribution, Shipping & Logistics
+              </Li>
+            </Ul>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

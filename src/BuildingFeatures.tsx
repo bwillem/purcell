@@ -1,6 +1,8 @@
 import { forwardRef } from "react";
 import H2 from "./H2";
 import Supertitle from "./Supertitle";
+import Li from './Li'
+import Ul from './Ul'
 
 const BuildingFeatures = forwardRef<HTMLDivElement, {}>((props, ref) => {
     return (
@@ -16,74 +18,74 @@ const BuildingFeatures = forwardRef<HTMLDivElement, {}>((props, ref) => {
                 </div>
                 <div className='flex mt-12'>
                     <div className='w-1/2 lg:w-1/4'>
-                        <ul className='list-none ml-o pl-[12px] [text-indent:-18px] pr-4'>
-                            <li className='text-white before:[padding-right:4px] before:[color:#A2BC4C] before:[content:"✓"!important]'>
+                        <Ul>
+                            <Li>
                                 Zoning: Unzoned
-                            </li>
-                            <li className='text-white before:[padding-right:4px] before:[color:#A2BC4C] before:[content:"✓"!important]'>
+                            </Li>
+                            <Li>
                                 Building Code Standard: F2 and F3 Industrial uses
-                            </li>
-                            <li className='text-white before:[padding-right:4px] before:[color:#A2BC4C] before:[content:"✓"!important]'>
+                            </Li>
+                            <Li>
                                 Contruction: Structural steel frame, insulated walls and ceilings
-                            </li>
-                            <li className='text-white before:[padding-right:4px] before:[color:#A2BC4C] before:[content:"✓"!important]'>
+                            </Li>
+                            <Li>
                                 Ceiling Height: 25 ft. to ceiling, 22 ft. clear to lighting
-                            </li>
-                            <li className='text-white before:[padding-right:4px] before:[color:#A2BC4C] before:[content:"✓"!important]'>
+                            </Li>
+                            <Li>
                                 Loading: Grade level loading with 12ft.(w) x 11 ft.(h) overhead dors per unit
-                            </li>
-                        </ul>
+                            </Li>
+                        </Ul>
                     </div>
                     <div className='w-1/2 lg:w-1/4'>
-                        <ul className='list-none ml-o pl-[12px] [text-indent:-18px] pr-4'>
-                            <li className='text-white before:[padding-right:4px] before:[color:#A2BC4C] before:[content:"✓"!important]'>
+                        <Ul>
+                            <Li>
                                 Floor Load: X00 lbs/SF warehouse floor load capacity (6-inch slab)
-                            </li>
-                            <li className='text-white before:[padding-right:4px] before:[color:#A2BC4C] before:[content:"✓"!important]'>
+                            </Li>
+                            <Li>
                                 Power: 200 amps, 102/208 volts per unit (3 phase), separately metered
-                            </li>
-                            <li className='text-white before:[padding-right:4px] before:[color:#A2BC4C] before:[content:"✓"!important]'>
+                            </Li>
+                            <Li>
                                 Backup Power: Diesel-fired backup generator
-                            </li>
-                            <li className='text-white before:[padding-right:4px] before:[color:#A2BC4C] before:[content:"✓"!important]'>
+                            </Li>
+                            <Li>
                                 Ventilation: Through-wall HRV in warehouse, A/C in office/storefront
-                            </li>
-                            <li className='text-white before:[padding-right:4px] before:[color:#A2BC4C] before:[content:"✓"!important]'>
+                            </Li>
+                            <Li>
                                 Sprinklers: ESFR sprinkler system throughout
-                            </li>
-                        </ul>
+                            </Li>
+                        </Ul>
                     </div>
                     <div className='w-1/2 lg:w-1/4'>
-                        <ul className='list-none ml-o pl-[12px] [text-indent:-18px] pr-4'>
-                            <li className='text-white before:[padding-right:4px] before:[color:#A2BC4C] before:[content:"✓"!important]'>
+                        <Ul>
+                            <Li>
                                 Lighting: High-bay lighting installed in warehouse
-                            </li>
-                            <li className='text-white before:[padding-right:4px] before:[color:#A2BC4C] before:[content:"✓"!important]'>
+                            </Li>
+                            <Li>
                                 Mezzanine: Structural steel mezzanine complete with guard rail and designed to X00 lbs/SF load capacity*
-                            </li>
-                            <li className='text-white before:[padding-right:4px] before:[color:#A2BC4C] before:[content:"✓"!important]'>
+                            </Li>
+                            <Li>
                                 Heading: Gas-fired radiant heat in warehouse, baseboard heat in office/storefront
-                            </li>
-                            <li className='text-white before:[padding-right:4px] before:[color:#A2BC4C] before:[content:"✓"!important]'>
+                            </Li>
+                            <Li>
                                 Signage: Available on highway-facing building exterior and site entrance pylon
-                            </li>
-                        </ul>
+                            </Li>
+                        </Ul>
                     </div>
                     <div className='w-1/2 lg:w-1/4'>
-                        <ul className='list-none ml-o pl-[12px] [text-indent:-18px] pr-4'>
-                            <li className='text-white before:[padding-right:4px] before:[color:#A2BC4C] before:[content:"✓"!important]'>
+                        <Ul>
+                            <Li>
                                 Parking: +62 reserved and visitor parking stalls plus surplus lot
-                            </li>
-                            <li className='text-white before:[padding-right:4px] before:[color:#A2BC4C] before:[content:"✓"!important]'>
+                            </Li>
+                            <Li>
                                 Fibre: Fibre optic availability per unit
-                            </li>
-                            <li className='text-white before:[padding-right:4px] before:[color:#A2BC4C] before:[content:"✓"!important]'>
+                            </Li>
+                            <Li>
                                 Bathroom: One finished bathroom per unit
-                            </li>
-                            <li className='text-white before:[padding-right:4px] before:[color:#A2BC4C] before:[content:"✓"!important]'>
+                            </Li>
+                            <Li>
                                 Storefront: One highway-faceing main unit entrance per unit
-                            </li>
-                        </ul>
+                            </Li>
+                        </Ul>
                     </div>
                 </div>
             </div>
