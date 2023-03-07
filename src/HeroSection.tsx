@@ -1,9 +1,10 @@
 import { FC, ForwardedRef, forwardRef, ReactElement } from "react"
+import Container from "./Container"
 import H2 from "./H2"
 import Supertitle from "./Supertitle"
 
 const HeroPanel: FC<{ children: ReactElement[] }> = props =>
-    <div className="w-1/2 space-y-2 px-24 py-12 bg-[rgba(0,0,0,.5)]" {...props} />
+    <div className="w-full lg:w-1/2 space-y-2 px-12 lg:px-24 py-12 bg-[rgba(0,0,0,.5)]" {...props} />
 
 const HeroButton: FC<{ children: string }> = props =>
     <button className="px-4 py-3 bg-white uppercase" {...props} />
@@ -20,7 +21,7 @@ function HeroSection(props: {}, ref: ForwardedRef<any>) {
             backgroundSize: 'cover',
             height: 'calc(100vh - 102px)',
         }}>
-            <div className="mx-auto container pt-24">
+            <Container className="pt-12 lg:pt-24">
                 <HeroPanel>
                     <Supertitle>For sale</Supertitle>
                     <div className="space-y-8">
@@ -29,7 +30,7 @@ function HeroSection(props: {}, ref: ForwardedRef<any>) {
                         <HeroButton>Register now</HeroButton>
                     </div>
                 </HeroPanel>
-            </div>
+            </Container>
         </div>
     )
 }

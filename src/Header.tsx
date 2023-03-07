@@ -1,5 +1,6 @@
 import { slide as Menu } from 'react-burger-menu'
 import { FC } from "react"
+import Container from './Container'
 
 const RegisterButton: FC<{ children: string }> = props =>
   <button className='border-primary-light border ml-3 py-1 px-3 text-primary-light' {...props} />
@@ -15,7 +16,7 @@ const Wordmark: FC = () =>
 function Header() {
   return (
     <header className='bg-primary-dark'>
-      <div className='py-4 container flex w-full mx-auto items-center justify-between'>
+      <Container className='py-4 flex w-full items-center justify-between'>
         <Wordmark />
         <div className='lg:hidden'>
           <Menu right>
@@ -39,7 +40,7 @@ function Header() {
           <NavLink>Project Team</NavLink>
           <RegisterButton>Register Now</RegisterButton>
         </nav>
-      </div>
+      </Container>
     </header>
   )
 }

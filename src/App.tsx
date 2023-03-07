@@ -4,14 +4,14 @@ import {
   useState,
   useRef,
 } from 'react';
-import './App.css';
 import BuildingFeatures from './BuildingFeatures';
+import Container from './Container';
 import H2 from './H2';
 import Header from './Header';
 import HeroSection from './HeroSection';
-import Li from './Li';
+import Location from './Location';
 import Supertitle from './Supertitle';
-import Ul from './Ul';
+import ValueProposition from './ValueProposition';
 
 interface Section {
   containerRef: MutableRefObject<HTMLDivElement | null>,
@@ -81,25 +81,21 @@ function App() {
     <div>
       <aside>
         <div className="w-full bg-brand">
-          <div className="container mx-auto flex items-center justify-end">
+          <Container className="flex items-center justify-end">
             <div className='flex p-1'>
               <a className='text-sm text-white'>Download brochure</a>
               <p className='text-sm text-white px-2'>|</p>
               <a className='text-sm text-white'>Download unit plans</a>
             </div>
-          </div>
+          </Container>
         </div>
       </aside>
       <Header />
       <HeroSection ref={homeRef} />
-      <div className='w-full flex' style={{
-        backgroundColor: '#1C1C1C',
-        backgroundImage: `url(/img/purcell-business-center.png)`,
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'right top',
-        backgroundSize: '50% 100%',
-      }}>
-        <div className='container mx-auto'>
+      <div
+        className='w-full flex half-image'
+      >
+        <Container>
           <div className='w-full lg:w-1/2 py-24 space-y-8'>
             <div className='space-y-3'>
               <Supertitle>
@@ -127,74 +123,12 @@ function App() {
               <button className='bg-brand uppercase px-4 py-2 tracking-wide'>Download unit plans</button>
             </div>
           </div>
-        </div>
+        </Container>
       </div>
       <div><h1 className='text-center py-24'>Video</h1></div>
       <BuildingFeatures ref={featuresRef} />
-      <div className='h-[400px]' style={{
-        backgroundImage: `url(/img/purcell-business-center-cross-section.png)`,
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-      }}></div>
-      <div className='bg-primary-dark'>
-        <div className='container flex mx-auto py-24 align-center'>
-          <H2 className='w-1/3 pr-4'>Combining 22’-clear warehouse, with potential office or storefront space within each unit, Purcell Business Centre offers businesses the broadest range of potential uses, including:</H2>
-          <div className='w-1/3 px-2 max-w-prose'>
-            <Ul>
-              <Li>
-                Industrial Services
-              </Li>
-              <Li>
-                Building & Construction Supply
-              </Li>
-              <Li>
-                Food & Beverage Processing
-              </Li>
-              <Li>
-                Material Manufacturing
-              </Li>
-              <Li>
-                E-Commerce
-              </Li>
-              <Li>
-                Fitness & Athletics
-              </Li>
-              <Li>
-                Recreational Equipment Sales & Storage
-              </Li>
-              <Li>
-                Auto Services & Parts
-              </Li>
-            </Ul>
-          </div>
-          <div className='w-1/3 px-2 max-w-prose'>
-            <Ul>
-              <Li>
-                Retail & Wholesaling
-              </Li>
-              <Li>
-                Home Business Expansion
-              </Li>
-              <Li>
-                Technology & Telecommunications
-              </Li>
-              <Li>
-                Professional Office
-              </Li>
-              <Li>
-                Personal & Business Storage
-              </Li>
-              <Li>
-                Commissary Kitchen
-              </Li>
-              <Li>
-                Distribution, Shipping & Logistics
-              </Li>
-            </Ul>
-          </div>
-        </div>
-      </div>
+      <Location ref={locationRef} />
+      <ValueProposition ref={valueRef} />
     </div>
   );
 }

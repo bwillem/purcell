@@ -1,8 +1,12 @@
+import classNames from "classnames"
 import { FC } from "react"
 
-const Supertitle: FC<{ children: string }> = props => {
+const Supertitle: FC<{ className?: string, children: string }> = ({ className = '', ...rest }) => {
     return (
-        <h3 className="text-white uppercase tracking-widest" {...props} />
+        <h3
+            className={classNames(className, "text-white uppercase tracking-widest")}
+            {...rest}
+        />
     )
 }
 

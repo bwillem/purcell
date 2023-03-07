@@ -25,8 +25,14 @@ a:hover {
   position: absolute;
   width: 32px;
   height: 24px;
-  right: 48px;
+  right: 20px;
   top: 53px;
+}
+
+@media (min-width: 900px) {
+  .bm-burger-button {
+    right: 48px;
+  }
 }
 
 /* Color/shape of burger icon bars */
@@ -88,6 +94,19 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
+}
+
+.half-image {
+  background-color: #1C1C1C;
+}
+
+@media (min-width: 900px) {
+  .half-image {
+    background: url(./img/purcell-business-center.png) no-repeat;
+    background-color: #1C1C1C;
+    background-position: right top;
+    background-size: 50% 100%;
+  }
 }
 
 @tailwind base;
