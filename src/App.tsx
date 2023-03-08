@@ -5,17 +5,20 @@ import {
   useRef,
 } from 'react';
 import BuildingFeatures from './BuildingFeatures';
-import Container from './Container';
-import H2 from './H2';
 import Header from './Header';
 import HeroSection from './HeroSection';
 import Location from './Location';
-import Supertitle from './Supertitle';
 import ValueProposition from './ValueProposition';
 
 interface Section {
   containerRef: MutableRefObject<HTMLDivElement | null>,
   cb: any,
+}
+
+const opts = {
+  // threshold: [0, 0.5, 1],
+  // threshold: 1,
+  rootMargin: '-50%',
 }
 
 function useTrackPagePosition(sections: Array<Section>) {
@@ -24,15 +27,14 @@ function useTrackPagePosition(sections: Array<Section>) {
    */
   useEffect(() => {
     const observers: IntersectionObserver[] = []
-    if (sections.every(section => section.containerRef.current)) {
-      sections.map(({ containerRef, cb }, i) => {
-        observers.push(new IntersectionObserver(cb))
 
-        if (containerRef.current && cb) {
-          observers[i].observe(containerRef.current)
-        }
-      })
-    }
+    sections.forEach(({ containerRef, cb }) => {
+      if (containerRef.current && cb) {
+        const ie = new IntersectionObserver(cb, opts)
+        ie.observe(containerRef.current)
+        observers.push(ie)
+      }
+    })
 
     return () => {
       observers.forEach((x, i) =>
@@ -79,52 +81,8 @@ function App() {
 
   return (
     <div>
-      <aside>
-        <div className="w-full bg-brand">
-          <Container className="flex items-center justify-end">
-            <div className='flex p-1'>
-              <a className='text-sm text-white'>Download brochure</a>
-              <p className='text-sm text-white px-2'>|</p>
-              <a className='text-sm text-white'>Download unit plans</a>
-            </div>
-          </Container>
-        </div>
-      </aside>
-      <Header />
+      <Header activeSection={activeSection} />
       <HeroSection ref={homeRef} />
-      <div
-        className='w-full flex half-image'
-      >
-        <Container>
-          <div className='w-full lg:w-1/2 py-24 space-y-8'>
-            <div className='space-y-3'>
-              <Supertitle>
-                Nelson, BC
-              </Supertitle>
-              <H2>1155 Insight Drive</H2>
-            </div>
-            <p className='text-white text-base max-w-[32em]'>
-              <span className='font-bold'>Purcell Business Center </span>
-              represents the highest quality flex-industrial real estate offering in the Kootenays, comprising of 16 thoughtfully designed units ranging in size from 2,470 to 7,778 SF. Redeveloped by Macdonald Communities Limited, and using 100% local builders, tradespeople and design consultants, Purcell Business Center marks an exceptionally rate opportunity to own the most highly functional and well located industrial real estate with complementary office and retail potential in the region.
-            </p>
-            <div>
-              <p className='text-white text-base mt-4'>
-                <span className='font-bold'>Occupancy: </span>
-                Summer 2023
-              </p>
-              <p className='text-white text-base'>
-                <span className='font-bold'>Sale Price: </span>
-                See Unit Plans
-              </p>
-            </div>
-            <div>&nbsp;</div>
-            <div className='flex'>
-              <button className='bg-brand uppercase px-4 py-2 tracking-wide mr-4'>Download bruchure</button>
-              <button className='bg-brand uppercase px-4 py-2 tracking-wide'>Download unit plans</button>
-            </div>
-          </div>
-        </Container>
-      </div>
       <div><h1 className='text-center py-24'>Video</h1></div>
       <BuildingFeatures ref={featuresRef} />
       <Location ref={locationRef} />

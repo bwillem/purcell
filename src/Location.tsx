@@ -12,10 +12,9 @@ import { forwardRef } from 'react';
 
 const Location = forwardRef<HTMLDivElement, {}>((props, ref) => {
     return (
-        <>
+        <div ref={ref}>
             <div
                 className='w-full lg:flex lg:relative h-[400px] lg:h-[660px]'
-                ref={ref}
             >
                 <div className='block lg:hidden h-full w-full'>
                     <Map />
@@ -28,7 +27,7 @@ const Location = forwardRef<HTMLDivElement, {}>((props, ref) => {
                 <Container className='py-24 lg:py-0 block lg:absolute lg:[transform:translate(-50%,100px)] lg:[left:50%]'>
                     <div className='space-y-8 lg:max-w-[32em]'>
                         <div className='space-y-3'>
-                            <Supertitle className='text-primary-dark'>
+                            <Supertitle className='text-primary-medium'>
                                 Location
                             </Supertitle>
                             <H2>
@@ -84,7 +83,7 @@ const Location = forwardRef<HTMLDivElement, {}>((props, ref) => {
                         <H2>Driving Times</H2>
                         <div className='flex mt-8'>
                             <div className='w-1/2'>
-                                <Supertitle className='mb-4'>Regional</Supertitle>
+                                <Supertitle className='text-white mb-4'>Regional</Supertitle>
                                 <p className='text-white'>Cranbrook — 2 hrs 45 mins</p>
                                 <p className='text-white'>Osoyoos — 3 hrs</p>
                                 <p className='text-white'>Spokane, WA — 3 hrs 15 mins</p>
@@ -94,7 +93,7 @@ const Location = forwardRef<HTMLDivElement, {}>((props, ref) => {
                                 <p className='text-white'>Vancouver — 7 hrs</p>
                             </div>
                             <div className='w-1/2'>
-                                <Supertitle className='mb-4'>Local</Supertitle>
+                                <Supertitle className='text-white mb-4'>Local</Supertitle>
                                 <p className='text-white'>Playmor Junction — 10 mins</p>
                                 <p className='text-white'>Castlegar — 30 mins</p>
                                 <p className='text-white'>Salmo — 30 mins</p>
@@ -112,7 +111,7 @@ const Location = forwardRef<HTMLDivElement, {}>((props, ref) => {
                     </div>
                 </Container>
             </div>
-        </>
+        </div>
     )
 })
 

@@ -7,11 +7,11 @@ import Container from "./Container";
 
 const BuildingFeatures = forwardRef<HTMLDivElement, {}>((props, ref) => {
     return (
-        <>
-            <div className='bg-primary-dark' ref={ref}>
+        <div ref={ref}>
+            <div className='bg-primary-dark'>
                 <Container className='py-24'>
                     <div className='text-center space-y-8'>
-                        <Supertitle>Building features</Supertitle>
+                        <Supertitle className="text-white">Building features</Supertitle>
                         <div className='max-w-[862px] mx-auto'>
                             <H2>
                                 Unzoned status and a significant degree of building features and amenities provides occupants with unparalleled business flexibility.
@@ -156,7 +156,7 @@ const BuildingFeatures = forwardRef<HTMLDivElement, {}>((props, ref) => {
                     </div>
                 </Container>
             </div>
-        </>
+        </div>
     )
 })
 
