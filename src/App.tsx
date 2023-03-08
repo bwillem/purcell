@@ -8,6 +8,7 @@ import BuildingFeatures from './BuildingFeatures';
 import Header from './Header';
 import HeroSection from './HeroSection';
 import Location from './Location';
+import Ownership from './Ownership';
 import ValueProposition from './ValueProposition';
 
 interface Section {
@@ -86,6 +87,7 @@ function App() {
       <BuildingFeatures ref={featuresRef} />
       <Location ref={locationRef} />
       <ValueProposition ref={valueRef} />
+      <Ownership ref={ownershipRef} />
     </div>
   );
 }

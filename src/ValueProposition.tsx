@@ -1,6 +1,7 @@
 import { FC, forwardRef } from "react"
 import Container from "./Container"
 import H2 from "./H2"
+import H3 from "./H3"
 import Supertitle from "./Supertitle"
 
 const Bold: FC<{ children: string }> = p => <span className='font-bold' {...p} />
@@ -16,7 +17,7 @@ const ValueProposition = forwardRef<HTMLDivElement, {}>((props, ref) => {
                 </div>
                 <div className="w-1/2 space-y-8">
                     <div>
-                        <H2>Vancouver</H2>
+                        <H3>Vancouver</H3>
                         <div className="flex text-white mt-2">
                             <div className='mr-8'>
                                 <p><Bold>Vacancy: </Bold>0.2%</p>
@@ -30,7 +31,7 @@ const ValueProposition = forwardRef<HTMLDivElement, {}>((props, ref) => {
                         </div>
                     </div>
                     <div>
-                        <H2>Kelowna</H2>
+                        <H3>Kelowna</H3>
                         <div className="flex text-white mt-2">
                             <div className='mr-8'>
                                 <p><Bold>Vacancy: </Bold>1.6%</p>
