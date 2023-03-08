@@ -43,7 +43,7 @@ const Ownership = forwardRef<HTMLDivElement, {}>((props, ref) => {
                 </div>
             </Container>
             <div
-                className='h-[400px] lg:h-[500px] relative after:absolute after:[left:0] after:w-full after:h-full after:[background:rgba(0,0,0,.5)] after:[content:""]'
+                className='relative before:absolute before:[left:0] before:w-full before:h-full before:[background:rgba(0,0,0,.5)] before:[content:""]'
                 style={{
                     backgroundImage: `url(/img/purcell-business-center-wide.png)`,
                     backgroundRepeat: 'no-repeat',
@@ -51,7 +51,23 @@ const Ownership = forwardRef<HTMLDivElement, {}>((props, ref) => {
                     backgroundSize: 'cover',
                 }}
             >
-                <H2>Owning your company’s real estate provides several attractive exit strategies for business owners.</H2>
+                <Container className="[z-index:2] relative text-center py-24 space-y-16">
+                    <H2 className="text-white max-w-[28em] mx-auto">Owning your company’s real estate provides several attractive exit strategies for business owners.</H2>
+                    <div className="flex">
+                        <div className="w-1/3">
+                            <H2>1</H2>
+                            <p className="text-white max-w-[16em] mx-auto">Selling your business and retaining the real estate as an income producing asset.</p>
+                        </div>
+                        <div className="w-1/3">
+                            <H2>2</H2>
+                            <p className="text-white max-w-[16em] mx-auto">Monetizing your built up equity by selling your real estate (and potentially leasing it back).</p>
+                        </div>
+                        <div className="w-1/3">
+                            <H2>3</H2>
+                            <p className="text-white max-w-[16em] mx-auto">Selling your real estate and the business together.</p>
+                        </div>
+                    </div>
+                </Container>
             </div>
         </div>
     )
