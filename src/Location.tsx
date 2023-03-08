@@ -12,7 +12,7 @@ import { forwardRef } from 'react';
 
 const Location = forwardRef<HTMLDivElement, {}>((props, ref) => {
     return (
-        <div ref={ref}>
+        <div ref={ref} id='location'>
             <div
                 className='w-full lg:flex lg:relative h-[400px] lg:h-[660px]'
             >

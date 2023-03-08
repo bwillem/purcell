@@ -16,9 +16,8 @@ interface Section {
 }
 
 const opts = {
-  // threshold: [0, 0.5, 1],
-  // threshold: 1,
-  rootMargin: '-50%',
+  threshold: 0,
+  rootMargin: '-50% 0px -50%',
 }
 
 function useTrackPagePosition(sections: Array<Section>) {

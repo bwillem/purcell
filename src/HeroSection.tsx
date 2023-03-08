@@ -16,7 +16,7 @@ const url = `${process.env.PUBLIC_URL}/img/purcell-hero.png`
 
 function HeroSection(props: {}, ref: ForwardedRef<any>) {
     return (
-        <div ref={ref}>
+        <div ref={ref} id='home'>
             <div style={{
                 backgroundImage: `url('${url}')`,
                 backgroundSize: 'cover',
