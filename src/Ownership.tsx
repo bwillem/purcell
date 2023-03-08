@@ -1,5 +1,6 @@
 import { forwardRef } from "react"
 import Container from "./Container"
+import H2 from "./H2"
 import H3 from "./H3"
 import Supertitle from "./Supertitle"
 
@@ -39,9 +40,19 @@ const Ownership = forwardRef<HTMLDivElement, {}>((props, ref) => {
                             <p>Multiple potential tax write-offs, including rental payments as a business expense, and carrying costs from holding company income. Speak to your tax consultant for unique opportunities available.</p>
                         </div>
                     </div>
-
                 </div>
             </Container>
+            <div
+                className='h-[400px] lg:h-[500px] relative after:absolute after:[left:0] after:w-full after:h-full after:[background:rgba(0,0,0,.5)] after:[content:""]'
+                style={{
+                    backgroundImage: `url(/img/purcell-business-center-wide.png)`,
+                    backgroundRepeat: 'no-repeat',
+                    backgroundPosition: 'center',
+                    backgroundSize: 'cover',
+                }}
+            >
+                <H2>Owning your company’s real estate provides several attractive exit strategies for business owners.</H2>
+            </div>
         </div>
     )
 })

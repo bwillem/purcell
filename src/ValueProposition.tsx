@@ -51,7 +51,9 @@ const ValueProposition = forwardRef<HTMLDivElement, {}>((props, ref) => {
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
-            }}></div>
+            }}>
+                
+            </div>
         </div>
     )
 })
