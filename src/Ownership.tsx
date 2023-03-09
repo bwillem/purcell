@@ -3,6 +3,8 @@ import Container from "./Container"
 import H2 from "./H2"
 import H3 from "./H3"
 import Supertitle from "./Supertitle"
+import PurcellFront from './img/purcell-front.png'
+import ImpactLogo from './img/impact-logo.png'
 
 const Ownership = forwardRef<HTMLDivElement, {}>((props, ref) => {
     return (
@@ -11,7 +13,7 @@ const Ownership = forwardRef<HTMLDivElement, {}>((props, ref) => {
                 <Supertitle className="text-black max-w-[20em]">
                     Why owning your real estate is a smart business decision
                 </Supertitle>
-                <div className="flex space-x-12">
+                <div className="flex flex-wrap lg:flex-nowrap space-y-12 lg:space-y-0 lg:space-x-12">
                     <div className="w-full lg:w-1/3 space-y-8">
                         <p className='text-black'>
                             Whether purchasing real estate for the certainty of your business operation, or for the opportunity to invest, Purcell Business Centre offers the opportunity to own a newly upgraded strata unit, renovated by a trusted developer in a professionally managed building. As one of the highest quality industrial buildings in the Kootenays, combined with an extensive list of newly installed building and mechanical systems, the risk of significant capital repairs has been substantially minimized over the first 10 years, providing owners with carefree ownership and management.
@@ -69,6 +71,50 @@ const Ownership = forwardRef<HTMLDivElement, {}>((props, ref) => {
                     </div>
                 </Container>
             </div>
+            <div className="bg-primary">
+                <Container className="flex py-24 items-center">
+                    <div className="space-y-8 lg:w-1/2">
+                        <Supertitle className="text-white">
+                            Path to ownership
+                        </Supertitle>
+                        <p className="text-white">
+                            This is an exciting and important next step for your business, and MacDonald Communities will be there to assist you at each stage of the process. During construction, regular progress updates will be provided, so you can effectively plan your financing arrangements and coordination with legal counsel in preparation of taking ownership of your unit. During corporate signage installation and office improvement work, Macdonald Development will assist in the coordination with your contractors, so that your unit is fully move-in ready on day one. Upon occupancy, an experienced strata property manager will be available to ensure the property is well-maintained and fully managed, so you can continue to focus on the success of your core business.
+                        </p>
+                    </div>
+                    <div className="hidden lg:block lg:w-1/2">
+                        <div className="max-w-[24em] mx-auto">
+                            <img src={PurcellFront} />
+                        </div>
+                    </div>
+                </Container>
+            </div>
+            <Container className="py-24 space-y-8">
+                <Supertitle>
+                    Financing
+                </Supertitle>
+                <div className="flex flex-wrap space-y-12 lg:space-y-0">
+                    <div className="lg:w-1/2 space-y-8">
+                        <p>
+                            Several opportunities for favourable financing terms may be available to you or your business. To find out which options may be available to you, please contact our commercial lending partner Impact Commercial Group.
+                        </p>
+                        <p>
+                            Vendor-take-back financing options may also be available to you. For vendor-financing inquiries, please contact:
+                        </p>
+                        <p>
+                            Tristan Chart, CFA<br />Fair Realty Commercial<br />250.777.7493<br />tristan@tristanchartcommercial.com
+                        </p>
+                    </div>
+                    <div className="lg:pl-16 lg:w-1/2 space-y-4">
+                        <H3>Michael Mullen</H3>
+                        <p>
+                            Partner | Commercial Mortgage Broker<br />Impact Commercial Group Inc.<br />604.928.1507<br />michael.mullen@impactcommercial.ca
+                        </p>
+                        <div className="max-w-[200px]">
+                            <img src={ImpactLogo} />
+                        </div>
+                    </div>
+                </div>
+            </Container>
         </div>
     )
 })
