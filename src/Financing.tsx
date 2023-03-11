@@ -27,7 +27,7 @@ const Financing = forwardRef<HTMLDivElement, {}>((props, ref) =>
                 <p>
                     Partner | Commercial Mortgage Broker<br />Impact Commercial Group Inc.<br />604.928.1507<br />michael.mullen@impactcommercial.ca
                 </p>
-                <div className="max-w-[200px]">
+                <div className="max-w-[178px]">
                     <img src={ImpactLogo} />
                 </div>
             </div>

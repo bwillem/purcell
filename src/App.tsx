@@ -10,6 +10,7 @@ import Header from './Header';
 import HeroSection from './HeroSection';
 import Location from './Location';
 import Ownership from './Ownership';
+import ProjectTeam from './ProjectTeam';
 import ValueProposition from './ValueProposition';
 
 interface Section {
@@ -89,6 +90,7 @@ function App() {
       <ValueProposition ref={valueRef} />
       <Ownership ref={ownershipRef} />
       <Financing ref={financingRef} />
+      <ProjectTeam ref={projectRef} />
     </div>
   );
 }
