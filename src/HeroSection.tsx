@@ -16,7 +16,7 @@ const url = `${process.env.PUBLIC_URL}/img/purcell-hero.png`
 
 function HeroSection(props: {}, ref: ForwardedRef<any>) {
     return (
-        <div ref={ref} id='home'>
+        <div id='home'>
             <div style={{
                 backgroundImage: `url('${url}')`,
                 backgroundSize: 'cover',
@@ -33,6 +33,7 @@ function HeroSection(props: {}, ref: ForwardedRef<any>) {
                     </HeroPanel>
                 </Container>
             </div>
+            <div ref={ref} />
             <div
                 className='w-full flex half-image'
             >

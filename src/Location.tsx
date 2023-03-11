@@ -12,10 +12,8 @@ import { forwardRef } from 'react';
 
 const Location = forwardRef<HTMLDivElement, {}>((props, ref) => {
     return (
-        <div ref={ref} id='location'>
-            <div
-                className='w-full lg:flex lg:relative h-[400px] lg:h-[660px]'
-            >
+        <div id='location'>
+            <div className='w-full lg:flex lg:relative h-[400px] lg:h-[660px]'>
                 <div className='block lg:hidden h-full w-full'>
                     <Map />
                 </div>
@@ -24,6 +22,7 @@ const Location = forwardRef<HTMLDivElement, {}>((props, ref) => {
                 <div className='hidden lg:block w-1/2'>
                     <Map />
                 </div>
+                <div ref={ref} />
                 <Container className='py-24 lg:py-0 block lg:absolute lg:[transform:translate(-50%,100px)] lg:[left:50%]'>
                     <div className='space-y-8 lg:max-w-[32em]'>
                         <div className='space-y-3'>

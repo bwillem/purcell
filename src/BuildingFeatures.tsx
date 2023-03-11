@@ -7,7 +7,7 @@ import Container from "./Container";
 
 const BuildingFeatures = forwardRef<HTMLDivElement, {}>((props, ref) => {
     return (
-        <div ref={ref} id='features'>
+        <div id='features'>
             <div className='bg-primary-dark'>
                 <Container className='py-24'>
                     <div className='text-center space-y-8'>
@@ -38,6 +38,7 @@ const BuildingFeatures = forwardRef<HTMLDivElement, {}>((props, ref) => {
                                 </Li>
                             </Ul>
                         </div>
+                        <div ref={ref} />
                         <div className='w-1/2 lg:w-1/4'>
                             <Ul>
                                 <Li>

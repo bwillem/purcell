@@ -5,6 +5,7 @@ import {
   useRef,
 } from 'react';
 import BuildingFeatures from './BuildingFeatures';
+import Financing from './Financing';
 import Header from './Header';
 import HeroSection from './HeroSection';
 import Location from './Location';
@@ -18,7 +19,6 @@ interface Section {
 
 const opts = {
   threshold: 0,
-  rootMargin: '-50% 0px -50%',
 }
 
 function useTrackPagePosition(sections: Array<Section>) {
@@ -88,6 +88,7 @@ function App() {
       <Location ref={locationRef} />
       <ValueProposition ref={valueRef} />
       <Ownership ref={ownershipRef} />
+      <Financing ref={financingRef} />
     </div>
   );
 }
