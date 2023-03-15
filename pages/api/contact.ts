@@ -25,11 +25,10 @@ export default async function handler(
         },
         From: {
           Email: 'bguenther3@gmail.com',
-          Name: 'Purcell Website',
+          Name: req.body.name,
         },
         To: [{
           Email: 'bguenther3@gmail.com',
-          Name: req.body.name,
         }],
         Subject: 'New contact form submission',
         TextPart: `Message: ${req.body.message} From: ${req.body.email}`,

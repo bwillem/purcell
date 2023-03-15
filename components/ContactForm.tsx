@@ -11,6 +11,7 @@ import {
 } from "react";
 import Container from "./Container";
 import Supertitle from "./Supertitle";
+import { CgSpinner } from 'react-icons/cg'
 
 const Label: FC<LabelHTMLAttributes<HTMLLabelElement>> = props => {
     return <label
@@ -36,7 +37,7 @@ const TextArea: FC<TextareaHTMLAttributes<HTMLTextAreaElement> & { hasError: boo
 const Submit: FC<ButtonHTMLAttributes<HTMLButtonElement>> = props => {
     return <button
         type='submit'
-        className='border border-brand rounded px-4 py-1 text-primary text-sm bg-brand transition-all hover:shadow-xl hover:shadow-brand-light'
+        className='border border-brand rounded px-4 py-1 text-primary text-sm bg-brand transition-all hover:shadow-xl hover:shadow-brand-light h-[30px]'
         {...props}
     />
 }
@@ -58,11 +59,14 @@ const Success: FC<HTMLAttributes<HTMLParagraphElement>> = props => {
 export default function ContactForm() {
     const [error, setError] = useState('')
     const [success, setSuccess] = useState('')
+    const [loading, setLoading] = useState(false)
     const formRef = useRef<HTMLFormElement | null>(null)
 
     const onSubmit: FormEventHandler<HTMLFormElement> = async e => {
         e.preventDefault()
+        setLoading(true)
         setError('')
+        setSuccess('')
 
         const data = {
             // @ts-ignore
@@ -82,12 +86,18 @@ export default function ContactForm() {
                 method: 'post',
                 body: JSON.stringify(data),
             })
+            if (!r.ok) {
+                console.error((await r.json()))
+                return setError('Server error')
+            }
             setSuccess("Thank you for your interest! We'll be in touch as soon as possible.")
             formRef.current?.reset()
         } catch (e) {
             console.error(e)
             setError('Error')
         }
+
+        setLoading(false)
     }
 
     return (
@@ -111,7 +121,7 @@ export default function ContactForm() {
                         <Success>{success}</Success>
                         <Error>{error}</Error>
                         <Submit>
-                            Submit
+                            {loading ? <CgSpinner className='animate-spin h-full' /> : <>Submit</>}
                         </Submit>
                     </div>
                 </Container>
