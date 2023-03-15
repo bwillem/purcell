@@ -16,7 +16,7 @@ export default async function handler(
   res: NextApiResponse<Data>
 ) {
   console.log('api/contact', req.body)
-  p
+
   try {
     const request = await mj
       .post('send', {})
