@@ -22,8 +22,13 @@ export default async function handler(
       .post('send', {})
       .request({
         Messages: [{
-          From: {},
-          To: [{}],
+          From: {
+            Name: 'Purcell Website',
+          },
+          To: [{
+            Email: 'bguenther3@gmail.com',
+            Name: req.body.name,
+          }],
           Subject: 'New contact form submission',
           TextPart: req.body.message,
         }],
