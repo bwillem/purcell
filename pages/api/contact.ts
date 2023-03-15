@@ -18,11 +18,12 @@ export default async function handler(
   console.log('api/contact', req.body)
 
   try {
-    const request = await mj
+    await mj
       .post('send', {})
       .request({
         Messages: [{
           From: {
+            Email: 'bguenther3@gmail.com',
             Name: 'Purcell Website',
           },
           To: [{
@@ -30,7 +31,7 @@ export default async function handler(
             Name: req.body.name,
           }],
           Subject: 'New contact form submission',
-          TextPart: req.body.message,
+          TextPart: `Message: ${req.body.message} From: ${req.body.email}`,
         }],
       })
   } catch (e) {
