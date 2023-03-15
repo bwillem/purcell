@@ -7,6 +7,7 @@ import {
     TextareaHTMLAttributes,
     HTMLAttributes,
     useState,
+    useRef,
 } from "react";
 import Container from "./Container";
 import Supertitle from "./Supertitle";
@@ -47,8 +48,17 @@ const Error: FC<HTMLAttributes<HTMLParagraphElement>> = props => {
     />
 }
 
+const Success: FC<HTMLAttributes<HTMLParagraphElement>> = props => {
+    return <p
+        className="text-green-500"
+        {...props}
+    />
+}
+
 export default function ContactForm() {
     const [error, setError] = useState('')
+    const [success, setSuccess] = useState('')
+    const formRef = useRef<HTMLFormElement | null>(null)
 
     const onSubmit: FormEventHandler<HTMLFormElement> = async e => {
         e.preventDefault()
@@ -72,7 +82,8 @@ export default function ContactForm() {
                 method: 'post',
                 body: JSON.stringify(data),
             })
-            console.log('response', r)
+            setSuccess("Thank you for your interest! We'll be in touch as soon as possible.")
+            formRef.current?.reset()
         } catch (e) {
             console.error(e)
             setError('Error')
@@ -81,7 +92,7 @@ export default function ContactForm() {
 
     return (
         <div className="bg-primary">
-            <form onSubmit={onSubmit}>
+            <form onSubmit={onSubmit} ref={formRef}>
                 <Container className="py-24 space-y-8 max-w-prose">
                     <Supertitle className="text-white">Get in touch</Supertitle>
                     <div>
@@ -97,6 +108,7 @@ export default function ContactForm() {
                         <TextArea hasError={error === 'Message required'} maxLength={5000} placeholder='Message...' name='message' />
                     </div>
                     <div className="flex space-x-4 items-center justify-end">
+                        <Success>{success}</Success>
                         <Error>{error}</Error>
                         <Submit>
                             Submit
