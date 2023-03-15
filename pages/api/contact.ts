@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import * as mailer from 'nodemailer'
 
 type Data = {
   name: string
