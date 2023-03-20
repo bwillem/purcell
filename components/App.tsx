@@ -16,27 +16,35 @@ import ValueProposition from './ValueProposition';
 
 interface Section {
   containerRef: MutableRefObject<HTMLDivElement | null>,
-  cb: any,
+  name: string,
 }
 
-const opts = {
+const opts: IntersectionObserverInit = {
   threshold: 0,
+  rootMargin: '-33% 0px -33px 0px',
 }
 
-function useTrackPagePosition(sections: Array<Section>) {
+function useTrackPagePosition(sections: Array<Section>, setter: any) {
+  const firstRender = useRef(true)
+
   /**
    * loop over ref, create an intersection observer for each one
    */
   useEffect(() => {
     const observers: IntersectionObserver[] = []
 
-    sections.forEach(({ containerRef, cb }) => {
-      if (containerRef.current && cb) {
-        const ie = new IntersectionObserver(cb, opts)
+    sections.forEach(({ containerRef, name }) => {
+      if (containerRef.current && name) {
+        const ie = new IntersectionObserver(() => setter(name), opts)
         ie.observe(containerRef.current)
         observers.push(ie)
       }
     })
+
+    if (firstRender.current) {
+      firstRender.current = false
+      setter('home')
+    }
 
     return () => {
       observers.forEach((x, i) =>
@@ -58,28 +66,26 @@ function App() {
 
   useTrackPagePosition([{
     containerRef: homeRef,
-    cb: () => setActiveSection('home'),
+    name: 'home',
   }, {
     containerRef: featuresRef,
-    cb: () => setActiveSection('features'),
+    name: 'features',
   }, {
     containerRef: locationRef,
-    cb: () => setActiveSection('location'),
+    name: 'location',
   }, {
     containerRef: valueRef,
-    cb: () => setActiveSection('value'),
+    name: 'value',
   }, {
     containerRef: ownershipRef,
-    cb: () => setActiveSection('ownership'),
+    name: 'ownership',
   }, {
     containerRef: financingRef,
-    cb: () => setActiveSection('financing'),
+    name: 'financing',
   }, {
     containerRef: projectRef,
-    cb: () => setActiveSection('project'),
-  }])
-
-  console.log('active sects', activeSection)
+    name: 'project',
+  }], setActiveSection)
 
   return (
     <>

@@ -9,6 +9,7 @@ const Bold: FC<{ children: string }> = p => <span className='font-bold' {...p} /
 const ValueProposition = forwardRef<HTMLDivElement, {}>((props, ref) => {
     return (
         <div className="bg-primary-dark" id='value'>
+            <div ref={ref} />
             <Container className="py-24 items-center flex">
                 <div className='space-y-8 w-1/2 pr-24'>
                     <Supertitle className="text-white">Value proposition</Supertitle>
@@ -45,7 +46,6 @@ const ValueProposition = forwardRef<HTMLDivElement, {}>((props, ref) => {
                         </div>
                     </div>
                 </div>
-                <div ref={ref} />
             </Container>
             <div className='h-[633px] lg:h-[800px]' style={{
                 backgroundImage: `url(/img/purcell-top.png)`,
@@ -53,7 +53,7 @@ const ValueProposition = forwardRef<HTMLDivElement, {}>((props, ref) => {
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
             }}>
-                
+
             </div>
         </div>
     )

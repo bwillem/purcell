@@ -1,12 +1,12 @@
 import { forwardRef } from "react"
 import Supertitle from "./Supertitle"
-import FairLogo from './img/fair-logo.png'
 import H4 from "./H4"
 import Container from "./Container"
 
 const ProjectTeam = forwardRef<HTMLDivElement, {}>((props, ref) => {
     return (
         <div className="bg-primary-dark">
+            <div ref={ref} />
             <Container className="space-y-12 py-24">
                 <Supertitle className="text-white">
                     Project team
@@ -33,7 +33,6 @@ const ProjectTeam = forwardRef<HTMLDivElement, {}>((props, ref) => {
                         <p className="text-white">Over the course of a decade, Tristan has established himself as an industry leading commercial real estate professional, with over $4 billion of commercial property transaction volume within all major Canadian markets and across all major property types and disciplines, including industrial, office, retail, condo development land, hotel, multi-family, affordable housing, and long-term care. Tristan draws from his experience an extensive network of relationships that, combined with his attention to detail, professionalism and confidence, represent key components of his clients’ success. Tristan serves his clients with a regional focus across the BC Interior and Southern Alberta markets, and he is exclusively responsible for the marketing and sales of Purcell Business Centre.</p>
                     </div>
                 </div>
-                <div ref={ref} />
             </Container>
         </div>
     )

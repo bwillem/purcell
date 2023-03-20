@@ -29,9 +29,9 @@ function HeroSection(props: {}, ref: ForwardedRef<any>) {
                             <HeroButton>Register now</HeroButton>
                         </div>
                     </HeroPanel>
+                    <div ref={ref} />
                 </Container>
             </div>
-            <div ref={ref} />
             <div
                 className='w-full flex half-image'
             >

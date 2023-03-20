@@ -104,7 +104,7 @@ export default function ContactForm() {
         <div className="bg-primary">
             <form onSubmit={onSubmit} ref={formRef}>
                 <Container className="py-24 space-y-8 max-w-prose">
-                    <Supertitle className="text-white">Get in touch</Supertitle>
+                    <Supertitle className="text-white">Register now</Supertitle>
                     <div>
                         <Label htmlFor='name'>Name</Label>
                         <TextInput hasError={error === 'Name required'} maxLength={300} placeholder='Name...' name='name' />

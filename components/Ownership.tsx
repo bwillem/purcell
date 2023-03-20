@@ -7,6 +7,7 @@ import Supertitle from "./Supertitle"
 const Ownership = forwardRef<HTMLDivElement, {}>((props, ref) => {
     return (
         <div id='ownership'>
+            <div ref={ref} />
             <Container className="py-24 space-y-8">
                 <Supertitle className="text-black max-w-[20em]">
                     Why owning your real estate is a smart business decision
@@ -42,7 +43,6 @@ const Ownership = forwardRef<HTMLDivElement, {}>((props, ref) => {
                     </div>
                 </div>
             </Container>
-            <div ref={ref} />
             <div
                 className='relative before:absolute before:[left:0] before:w-full before:h-full before:[background:rgba(0,0,0,.5)] before:[content:""]'
                 style={{

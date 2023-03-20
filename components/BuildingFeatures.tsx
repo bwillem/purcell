@@ -38,7 +38,6 @@ const BuildingFeatures = forwardRef<HTMLDivElement, {}>((props, ref) => {
                                 </Li>
                             </Ul>
                         </div>
-                        <div ref={ref} />
                         <div className='w-1/2 lg:w-1/4'>
                             <Ul>
                                 <Li>
@@ -93,6 +92,7 @@ const BuildingFeatures = forwardRef<HTMLDivElement, {}>((props, ref) => {
                     </div>
                 </Container>
             </div>
+            <div ref={ref} />
             <div className='h-[400px]' style={{
                 backgroundImage: `url(/img/purcell-business-center-cross-section.png)`,
                 backgroundRepeat: 'no-repeat',
