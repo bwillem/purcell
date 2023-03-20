@@ -7,6 +7,7 @@ import {
 import BuildingFeatures from './BuildingFeatures';
 import ContactForm from './ContactForm';
 import Financing from './Financing';
+import Footer from './Footer';
 import Header from './Header';
 import HeroSection from './HeroSection';
 import Location from './Location';
@@ -21,7 +22,7 @@ interface Section {
 
 const opts: IntersectionObserverInit = {
   threshold: 0,
-  rootMargin: '-33% 0px -33px 0px',
+  rootMargin: '100px 0px -100px 0px',
 }
 
 function useTrackPagePosition(sections: Array<Section>, setter: any) {
@@ -99,6 +100,7 @@ function App() {
       <Financing ref={financingRef} />
       <ProjectTeam ref={projectRef} />
       <ContactForm />
+      <Footer />
     </>
   );
 }

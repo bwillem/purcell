@@ -18,7 +18,7 @@ const BuildingFeatures = forwardRef<HTMLDivElement, {}>((props, ref) => {
                             </H2>
                         </div>
                     </div>
-                    <div className='flex mt-12'>
+                    <div className='flex flex-wrap mt-12'>
                         <div className='w-1/2 lg:w-1/4'>
                             <Ul>
                                 <Li>
@@ -100,9 +100,9 @@ const BuildingFeatures = forwardRef<HTMLDivElement, {}>((props, ref) => {
                 backgroundSize: 'cover',
             }}></div>
             <div className='bg-primary-dark'>
-                <Container className='flex py-24 items-center'>
-                    <H2 className='w-1/3 pr-4'>Combining 22’-clear warehouse, with potential office or storefront space within each unit, Purcell Business Centre offers businesses the broadest range of potential uses, including:</H2>
-                    <div className='w-1/3 px-2 max-w-prose'>
+                <Container className='flex flex-wrap py-24 items-center'>
+                    <H2 className='lg:w-1/3 pr-4 pb-4 lg:pb-0'>Combining 22’-clear warehouse, with potential office or storefront space within each unit, Purcell Business Centre offers businesses the broadest range of potential uses, including:</H2>
+                    <div className='w-1/2 lg:w-1/3 px-2 max-w-prose'>
                         <Ul>
                             <Li>
                                 Industrial Services
@@ -130,7 +130,7 @@ const BuildingFeatures = forwardRef<HTMLDivElement, {}>((props, ref) => {
                             </Li>
                         </Ul>
                     </div>
-                    <div className='w-1/3 px-2 max-w-prose'>
+                    <div className='w-1/2 lg:w-1/3 px-2 max-w-prose'>
                         <Ul>
                             <Li>
                                 Retail & Wholesaling

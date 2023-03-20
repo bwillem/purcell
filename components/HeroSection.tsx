@@ -20,7 +20,7 @@ function HeroSection(props: {}, ref: ForwardedRef<any>) {
                 backgroundSize: 'cover',
                 height: 'calc(100vh)',
             }}>
-                <Container className="pt-24 lg:pt-40">
+                <Container className="pt-40">
                     <HeroPanel>
                         <Supertitle className="text-white">For sale</Supertitle>
                         <div className="space-y-8">

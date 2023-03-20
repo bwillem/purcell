@@ -5,7 +5,7 @@ import Container from "./Container"
 
 const ProjectTeam = forwardRef<HTMLDivElement, {}>((props, ref) => {
     return (
-        <div className="bg-primary-dark">
+        <div id='project' className="bg-primary-dark">
             <div ref={ref} />
             <Container className="space-y-12 py-24">
                 <Supertitle className="text-white">

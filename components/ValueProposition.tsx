@@ -10,13 +10,13 @@ const ValueProposition = forwardRef<HTMLDivElement, {}>((props, ref) => {
     return (
         <div className="bg-primary-dark" id='value'>
             <div ref={ref} />
-            <Container className="py-24 items-center flex">
-                <div className='space-y-8 w-1/2 pr-24'>
+            <Container className="py-24 items-center flex flex-wrap">
+                <div className='space-y-8 w-full lg:w-1/2 pr-24'>
                     <Supertitle className="text-white">Value proposition</Supertitle>
                     <H2>Position your business at a more than 50% reduced real estate cost than in major BC markets.</H2>
                     <p className='text-white'>Industrial market vacancies across Canada are at historic lows, propelling market rental rates and per square foot pricing upwards at tremendous rates. Purcell Business Centre offers a rare value proposition whereby regional industrial users can set up their business at comparable strata pricing that is +50% less than in major regional markets.</p>
                 </div>
-                <div className="w-1/2 space-y-8">
+                <div className="pt-8 lg:pt-8 w-full lg:w-1/2 space-y-8">
                     <div>
                         <H3>Vancouver</H3>
                         <div className="flex text-white mt-2">

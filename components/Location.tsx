@@ -1,10 +1,4 @@
 import Map from './Map';
-// import NelsonGolf from './img/nelson-golf.png'
-// import NelsonFood from './img/nelson-food.png'
-// import NelsonLake from './img/nelson-lake.png'
-// import NelsonStreet from './img/nelson-street.png'
-// import NelsonTown from './img/nelson-town.png'
-// import NelsonMap from './img/nelson-map.png'
 import Container from './Container';
 import Supertitle from './Supertitle';
 import H2 from './H2';
@@ -14,10 +8,7 @@ const Location = forwardRef<HTMLDivElement, {}>((props, ref) => {
     return (
         <div id='location'>
             <div ref={ref} />
-            <div className='w-full lg:flex lg:relative h-[400px] lg:h-[660px]'>
-                <div className='block lg:hidden h-full w-full'>
-                    <Map />
-                </div>
+            <div className='w-full lg:flex lg:relative h-auto lg:h-[660px]'>
                 <div className='hidden lg:block w-1/2'>
                 </div>
                 <div className='hidden lg:block w-1/2'>
@@ -52,6 +43,9 @@ const Location = forwardRef<HTMLDivElement, {}>((props, ref) => {
                         </div>
                     </div>
                 </Container>
+                <div className='block lg:hidden h-full w-full'>
+                    <Map />
+                </div>
             </div>
             <div className='bg-primary'>
                 <Container className='py-24'>
@@ -77,8 +71,8 @@ const Location = forwardRef<HTMLDivElement, {}>((props, ref) => {
                         </div>
                     </div>
                 </Container>
-                <Container className='flex items-center py-24'>
-                    <div className='w-1/2'>
+                <Container className='flex flex-wrap items-center py-24'>
+                    <div className='w-full lg:w-1/2 pb-8 lg:pb-0'>
                         <H2>Driving Times</H2>
                         <div className='flex mt-8'>
                             <div className='w-1/2'>
@@ -103,7 +97,7 @@ const Location = forwardRef<HTMLDivElement, {}>((props, ref) => {
                             </div>
                         </div>
                     </div>
-                    <div className='w-1/2'>
+                    <div className='w-full lg:w-1/2'>
                         <div>
                             <img src='/img/nelson-map.png' />
                         </div>
