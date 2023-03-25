@@ -15,6 +15,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
+
   console.log('api/contact', req.body)
 
   try {

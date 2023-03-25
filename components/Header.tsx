@@ -3,8 +3,8 @@ import { FC } from "react"
 import Container from './Container'
 
 const RegisterButton: FC<{ children: string, href: string }> = props =>
-  <button
-    className='border-primary-light border ml-3 py-1 px-3 text-primary-light hover:text-white hover:border-white transition-all'
+  <a
+    className='border-primary-light border ml-3 py-1 px-3 text-primary-light hover:text-white hover:border-white transition-all hover:no-underline'
     {...props}
   />
 
