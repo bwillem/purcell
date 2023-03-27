@@ -15,23 +15,33 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
+
   console.log('api/contact', req.body)
 
   try {
     const data: SendEmailV3_1.Body = {
       Messages: [{
         Sender: {
+          Name: 'Purcell website',
           Email: 'bguenther3@gmail.com',
         },
         From: {
+          Name: 'Purcell website',
           Email: 'bguenther3@gmail.com',
-          Name: req.body.name,
         },
         To: [{
           Email: 'bguenther3@gmail.com',
         }],
         Subject: 'New contact form submission',
-        TextPart: `Message: ${req.body.message} From: ${req.body.email}`,
+        TextPart: `Name: ${req.body.firstname} ${req.body.lastname}
+        Email: ${req.body.email}
+        Phone: ${req.body.phone}
+        Company: ${req.body.company}
+        Country: ${req.body.country}
+        Preferred size: ${req.body.size}
+        How did you hear of us?: ${req.body.how}
+        Are you a broken?: ${req.body.broker}
+        Opt-in consent: ${req.body.optin}`,
       }],
     }
 

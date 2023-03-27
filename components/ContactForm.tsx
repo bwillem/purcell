@@ -1,38 +1,50 @@
 import {
     FC,
-    FormEventHandler,
     LabelHTMLAttributes,
     ButtonHTMLAttributes,
     InputHTMLAttributes,
-    TextareaHTMLAttributes,
     HTMLAttributes,
     useState,
     useRef,
+    forwardRef,
+    SelectHTMLAttributes,
 } from "react";
 import Container from "./Container";
 import Supertitle from "./Supertitle";
 import { CgSpinner } from 'react-icons/cg'
+import { useForm } from "react-hook-form";
+import classNames from "classnames";
 
-const Label: FC<LabelHTMLAttributes<HTMLLabelElement>> = props => {
+const Label: FC<LabelHTMLAttributes<HTMLLabelElement>> = ({ className, ...rest }) => {
     return <label
-        className="pb-2 text-sm text-primary-light block"
-        {...props} />
+        className={classNames(className, "pb-0 text-sm text-primary-light block")}
+        {...rest} />
 }
 
-const TextInput: FC<InputHTMLAttributes<HTMLInputElement> & { hasError: boolean }> = props => {
-    const color = props.hasError ? 'border-red-500' : "border-primary-light"
+const TextInputLabel: FC<LabelHTMLAttributes<HTMLLabelElement>> = ({ className, ...rest }) => {
+    return <label
+        className={classNames(className, "pb-2 text-sm text-primary-light block")}
+        {...rest} />
+}
+
+const TextInput = forwardRef<HTMLInputElement, InputHTMLAttributes<HTMLInputElement> & { hasError: boolean }>(({ hasError, ...rest }, ref) => {
+    const color = hasError ? "border-red-500" : "border-primary-light"
+
     return <input
+        ref={ref}
         type='text'
         className={`w-full text-white px-3 py-2 bg-transparent border ${color} hover:border-white focus:border-white rounded`}
-        {...props} />
-}
+        {...rest} />
+})
 
-const TextArea: FC<TextareaHTMLAttributes<HTMLTextAreaElement> & { hasError: boolean }> = props => {
-    const color = props.hasError ? 'border-red-500' : "border-primary-light"
-    return <textarea
+const Select = forwardRef<HTMLSelectElement, SelectHTMLAttributes<HTMLSelectElement> & { hasError?: boolean }>(({ hasError = false, ...rest }, ref) => {
+    const color = hasError ? "border-red-500" : "border-primary-light"
+
+    return <select
+        ref={ref}
         className={`w-full text-white px-3 py-2 bg-transparent border ${color} hover:border-white focus:border-white rounded`}
-        {...props} />
-}
+        {...rest} />
+})
 
 const Submit: FC<ButtonHTMLAttributes<HTMLButtonElement>> = props => {
     return <button
@@ -62,60 +74,175 @@ export default function ContactForm() {
     const [loading, setLoading] = useState(false)
     const formRef = useRef<HTMLFormElement | null>(null)
 
-    const onSubmit: FormEventHandler<HTMLFormElement> = async e => {
-        e.preventDefault()
+    const { register, handleSubmit, formState: { errors } } = useForm()
+
+    const onSubmit = handleSubmit(async values => {
+        console.log('values', values)
         setLoading(true)
-        setError('')
-        setSuccess('')
-
-        const data = {
-            // @ts-ignore
-            name: e.target.name?.value,
-            // @ts-ignore
-            email: e.target.email?.value,
-            // @ts-ignore
-            message: e.target.message?.value,
-        }
-
-        if (!data.name?.length) return setError('Name required')
-        if (!data.message.length) return setError('Message required')
-        if (Boolean(!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(data.email))) return setError('Invalid email')
-
         try {
             const r = await fetch('/api/contact', {
                 method: 'post',
-                body: JSON.stringify(data),
+                body: JSON.stringify(values),
             })
             if (!r.ok) {
                 console.error((await r.json()))
+                setSuccess('')
                 return setError('Server error')
             }
+            setError("")
             setSuccess("Thank you for your interest! We'll be in touch as soon as possible.")
             formRef.current?.reset()
         } catch (e) {
             console.error(e)
+            setSuccess('')
             setError('Error')
         }
-
         setLoading(false)
-    }
+    })
+
+    // const onSubmit: FormEventHandler<HTMLFormElement> = async e => {
+    //     e.preventDefault()
+    //     setLoading(true)
+    //     setError('')
+    //     setSuccess('')
+
+    //     const data = {
+    //         // @ts-ignore
+    //         name: e.target.name?.value,
+    //         // @ts-ignore
+    //         email: e.target.email?.value,
+    //         // @ts-ignore
+    //         message: e.target.message?.value,
+    //     }
+
+    //     if (!data.name?.length) return setError('Name required')
+    //     if (!data.message.length) return setError('Message required')
+    //     if (Boolean(!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(data.email))) return setError('Invalid email')
+
+    //     try {
+    //         const r = await fetch('/api/contact', {
+    //             method: 'post',
+    //             body: JSON.stringify(data),
+    //         })
+    //         if (!r.ok) {
+    //             console.error((await r.json()))
+    //             return setError('Server error')
+    //         }
+    //         setSuccess("Thank you for your interest! We'll be in touch as soon as possible.")
+    //         formRef.current?.reset()
+    //     } catch (e) {
+    //         console.error(e)
+    //         setError('Error')
+    //     }
+
+    //     setLoading(false)
+    // }
 
     return (
-        <div className="bg-primary">
+        <div id='register' className="bg-primary">
             <form onSubmit={onSubmit} ref={formRef}>
                 <Container className="py-24 space-y-8 max-w-prose">
-                    <Supertitle className="text-white">Register now</Supertitle>
-                    <div>
-                        <Label htmlFor='name'>Name</Label>
-                        <TextInput hasError={error === 'Name required'} maxLength={300} placeholder='Name...' name='name' />
+                    <Supertitle className="text-white">Register for more information</Supertitle>
+                    <div className="flex lg:space-x-4">
+                        <div className="w-full lg:w-1/2">
+                            <TextInputLabel htmlFor='name'>First name *</TextInputLabel>
+                            <TextInput
+                                hasError={Boolean(errors['firstname'])}
+                                placeholder='First name...'
+                                {...register('firstname', { required: true })}
+                            />
+                        </div>
+                        <div className="w-full lg:w-1/2">
+                            <TextInputLabel htmlFor='name'>Last name *</TextInputLabel>
+                            <TextInput
+                                hasError={Boolean(errors['firstname'])}
+                                placeholder='Last name...'
+                                {...register('lastname', { required: true })}
+                            />
+                        </div>
+                    </div>
+                    <div className="flex lg:space-x-4">
+                        <div className="w-full lg:w-1/2">
+                            <TextInputLabel htmlFor='name'>Email *</TextInputLabel>
+                            <TextInput
+                                hasError={Boolean(errors['firstname'])}
+                                placeholder='Email...'
+                                {...register('email', {
+                                    pattern: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+                                },
+                                )}
+                            />
+                        </div>
+                        <div className="w-full lg:w-1/2">
+                            <TextInputLabel htmlFor='name'>Phone *</TextInputLabel>
+                            <TextInput
+                                hasError={Boolean(errors['firstname'])}
+                                type='number'
+                                placeholder='Phone...'
+                                {...register('phone')}
+                            />
+                        </div>
+                    </div>
+                    <div className="flex lg:space-x-4">
+                        <div className="w-full lg:w-1/2">
+                            <TextInputLabel htmlFor='name'>Company name</TextInputLabel>
+                            <TextInput
+                                hasError={Boolean(errors['firstname'])}
+                                placeholder='Email...'
+                                {...register('company')}
+                            />
+                        </div>
+                        <div className="w-full lg:w-1/2">
+                            <TextInputLabel htmlFor='name'>Country *</TextInputLabel>
+                            <TextInput
+                                hasError={Boolean(errors['firstname'])}
+                                placeholder='Country...'
+                                {...register('country')}
+                            />
+                        </div>
+                    </div>
+                    <div className="flex lg:space-x-4">
+                        <div className="w-full lg:w-1/2">
+                            <TextInputLabel htmlFor='name'>Preferred size of space (ex. 1000 sqft) *</TextInputLabel>
+                            <TextInput
+                                hasError={Boolean(errors['size'])}
+                                placeholder='Size...'
+                                {...register('size', { required: true })}
+                            />
+                        </div>
+                        <div className="w-full lg:w-1/2">
+                            <TextInputLabel htmlFor='name'>How did you hear of us? *</TextInputLabel>
+                            <Select {...register('how')}>
+                                <option selected>Select...</option>
+                                <option>Drove by</option>
+                                <option>Email</option>
+                                <option>Online ads</option>
+                                <option>Postcard/mailer</option>
+                                <option>Postcard/mailer</option>
+                                <option>Print advertising</option>
+                                <option>Signage</option>
+                                <option>Social media</option>
+                                <option>Other</option>
+                            </Select>
+                        </div>
                     </div>
                     <div>
-                        <Label htmlFor='name'>Email</Label>
-                        <TextInput hasError={error === 'Invalid email'} maxLength={300} placeholder='Email...' name='email' />
+                        <TextInputLabel>Are you a broker?</TextInputLabel>
+                        <div className="flex space-x-2 items-center pointer">
+                            <input id='yes' type='radio' {...register('broker')} />
+                            <Label className='pb-0' htmlFor='yes'>Yes</Label>
+                        </div>
+                        <div className="flex space-x-2 items-center pointer">
+                            <input id='no' type='radio' {...register('broker')} />
+                            <Label className='pb-0' htmlFor='no'>No</Label>
+                        </div>
                     </div>
                     <div>
-                        <Label htmlFor='name'>Message</Label>
-                        <TextArea hasError={error === 'Message required'} maxLength={5000} placeholder='Message...' name='message' />
+                        <TextInputLabel>Opt in *</TextInputLabel>
+                        <div className="flex space-x-2 items-center pointer">
+                            <input id='optin' type='checkbox' {...register('optin', { required: true })} />
+                            <Label className='pb-0' htmlFor='optin'>I consent to receive commerical emails from Purcell</Label>
+                        </div>
                     </div>
                     <div className="flex space-x-4 items-center justify-end">
                         <Success>{success}</Success>

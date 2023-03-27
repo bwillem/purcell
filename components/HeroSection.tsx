@@ -4,7 +4,7 @@ import H2 from "./H2"
 import Supertitle from "./Supertitle"
 
 const HeroPanel: FC<{ children: ReactElement[] }> = props =>
-    <div className="w-full lg:w-1/2 space-y-2 px-12 lg:px-24 py-12 bg-[rgba(0,0,0,.5)]" {...props} />
+    <div className="absolute top-[50%] [transform:translateY(-50%)] w-full lg:w-1/2 space-y-2 px-12 lg:px-24 py-12 bg-[rgba(0,0,0,.5)]" {...props} />
 
 const HeroButton: FC<{ children: string }> = props =>
     <button className="px-4 py-3 bg-white uppercase" {...props} />
@@ -15,12 +15,12 @@ const HeroHeading: FC<{ children: any }> = props =>
 function HeroSection(props: {}, ref: ForwardedRef<any>) {
     return (
         <div id='home'>
-            <div style={{
+            <div className='relative' style={{
                 backgroundImage: 'url(/img/purcell-hero.png)',
                 backgroundSize: 'cover',
                 height: 'calc(100vh)',
             }}>
-                <Container className="pt-40">
+                <Container className='px-4'>
                     <HeroPanel>
                         <Supertitle className="text-white">For sale</Supertitle>
                         <div className="space-y-8">

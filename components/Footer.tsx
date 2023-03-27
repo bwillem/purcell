@@ -2,7 +2,8 @@ import { FC } from "react"
 import Container from "./Container"
 import Supertitle from "./Supertitle"
 
-const FooterLink: FC<{ children: string, href: string }> = props => <a className='block text-white' {...props} />
+const FooterLink: FC<{ children: string, href: string }> = props =>
+    <a className='block text-white' {...props} />
 
 function Footer() {
     return (
