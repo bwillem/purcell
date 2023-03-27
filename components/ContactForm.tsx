@@ -212,8 +212,8 @@ export default function ContactForm() {
                         </div>
                         <div className="w-full lg:w-1/2">
                             <TextInputLabel htmlFor='name'>How did you hear of us? *</TextInputLabel>
-                            <Select {...register('how')}>
-                                <option selected>Select...</option>
+                            <Select defaultValue='Select...' {...register('how')}>
+                                <option>Select...</option>
                                 <option>Drove by</option>
                                 <option>Email</option>
                                 <option>Online ads</option>
@@ -244,7 +244,7 @@ export default function ContactForm() {
                             <Label className='pb-0' htmlFor='optin'>I consent to receive commerical emails from Purcell</Label>
                         </div>
                     </div>
-                    <div className="flex space-x-4 items-center justify-end">
+                    <div className="flex space-x-2 items-center justify-end">
                         <Success>{success}</Success>
                         <Error>{error}</Error>
                         <Submit>

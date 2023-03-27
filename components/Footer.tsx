@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { FC } from "react"
 import Container from "./Container"
 import Supertitle from "./Supertitle"
@@ -34,9 +35,9 @@ function Footer() {
             <aside className="w-full bg-brand">
                 <Container className="flex items-center justify-end">
                     <div className='flex p-1'>
-                        <a className='text-sm text-white'>Site disclaimer</a>
+                        <Link href='/disclaimer' className='text-sm text-white'>Site disclaimer</Link>
                         <p className='text-sm text-white px-2'>|</p>
-                        <a className='text-sm text-white'>Privacy policy</a>
+                        <Link href='/privacy' className='text-sm text-white'>Privacy policy</Link>
                     </div>
                 </Container>
             </aside>
