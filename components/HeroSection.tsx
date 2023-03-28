@@ -4,7 +4,7 @@ import H2 from "./H2"
 import Supertitle from "./Supertitle"
 
 const HeroPanel: FC<{ children: ReactElement[] }> = props =>
-    <div className="absolute top-[50%] [transform:translateY(-50%)] w-full lg:w-1/2 space-y-2 px-12 lg:px-24 py-12 bg-[rgba(0,0,0,.5)]" {...props} />
+    <div className="absolute top-[50%] [transform:translateY(-50%)] w-[90%] md:w-[75%] lg:w-1/2 space-y-2 px-12 lg:px-24 py-12 bg-[rgba(0,0,0,.5)]" {...props} />
 
 const HeroButton: FC<{ children: string }> = props =>
     <button className="px-4 py-3 bg-white uppercase" {...props} />

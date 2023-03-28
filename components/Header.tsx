@@ -10,11 +10,11 @@ const RegisterButton: FC<{ children: string, href: string }> = props =>
 
 const NavLink: FC<{ active?: boolean, children: string, href: string }> = ({ active, ...rest }) => {
   const colour = active ? 'text-white' : 'text-primary-light'
-  return <a className={`text-base ml-3 ${colour}`} {...rest} />
+  return <a className={`text-base ml-3 first:ml-0 ${colour}`} {...rest} />
 }
 
 const Wordmark: FC = () =>
-  <h1 className='py-2 px-4 text-white border-white border text-base uppercase tracking-widest'>Purcell Business Center</h1>
+  <h1 className='py-2 px-4 inline text-white border-white border text-base uppercase tracking-widest'>Purcell Business Center</h1>
 
 function Header({ activeSection = '' }) {
   return (
@@ -29,8 +29,10 @@ function Header({ activeSection = '' }) {
         </Container>
       </aside>
       <header className='bg-primary-dark'>
-        <Container className='py-4 flex w-full items-center justify-between'>
-          <Wordmark />
+        <Container className='py-4 block xl:flex w-full items-center justify-between'>
+          <div className='pt-0 pb-0 lg:pt-2 lg:pb-5 xl:pt-0 xl:pb-0' >
+            <Wordmark />
+          </div>
           <div className='lg:hidden'>
             <Menu right>
               <a href='#home'>Home</a>
