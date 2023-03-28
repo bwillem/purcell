@@ -25,13 +25,17 @@ function Footer() {
                         <FooterLink href=''>Download Unit Plans</FooterLink>
                     </div>
                     <div className="w-1/2 lg:w-1/4">
-                        <img src='' />
+                        <div className="max-w-[232px]">
+                            <img src='/img/macdonald-logo.png' />
+                        </div>
                     </div>
                     <div className="w-1/2 lg:w-1/4">
-                        <img src='' />
+                        <div className="max-w-[200px]">
+                            <img src='/img/fair-logo.png' />
+                        </div>
                     </div>
                 </Container>
-            </div>
+            </div >
             <aside className="w-full bg-brand">
                 <Container className="flex items-center justify-end">
                     <div className='flex p-1'>
