@@ -16,7 +16,7 @@ export default async function handler(
   res: NextApiResponse<Data>
 ) {
 
-  console.log('api/contact', req.body)
+  const body = JSON.parse(req.body)
 
   try {
     const data: SendEmailV3_1.Body = {
@@ -33,15 +33,15 @@ export default async function handler(
           Email: 'bguenther3@gmail.com',
         }],
         Subject: 'New contact form submission',
-        TextPart: `Name: ${req.body.firstname} ${req.body.lastname}
-        Email: ${req.body.email}
-        Phone: ${req.body.phone}
-        Company: ${req.body.company}
-        Country: ${req.body.country}
-        Preferred size: ${req.body.size}
-        How did you hear of us?: ${req.body.how}
-        Are you a broken?: ${req.body.broker}
-        Opt-in consent: ${req.body.optin}`,
+        TextPart: `Name: ${body.firstname} ${body.lastname}
+Email: ${body.email}
+Phone: ${body.phone}
+Company: ${body.company}
+Country: ${body.country}
+Preferred size: ${body.size}
+How did you hear of us?: ${body.how}
+Are you a broken?: ${body.broker}
+Opt-in consent: ${body.optin}`,
       }],
     }
 
