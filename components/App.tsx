@@ -14,6 +14,7 @@ import Location from './Location';
 import Ownership from './Ownership';
 import ProjectTeam from './ProjectTeam';
 import ValueProposition from './ValueProposition';
+import Video from './Video';
 
 interface Section {
   containerRef: MutableRefObject<HTMLDivElement | null>,
@@ -92,7 +93,7 @@ function App() {
     <>
       <Header activeSection={activeSection} />
       <HeroSection ref={homeRef} />
-      <div><h1 className='text-center py-24'>Video</h1></div>
+      <Video />
       <BuildingFeatures ref={featuresRef} />
       <Location ref={locationRef} />
       <ValueProposition ref={valueRef} />
