@@ -22,9 +22,9 @@ function Header({ activeSection = '' }) {
       <aside className="w-full bg-brand">
         <Container className="flex items-center justify-end">
           <div className='flex p-1'>
-            <a className='text-sm text-white'>Download brochure</a>
+            <a href='/purcell-brochure.pdf' className='text-sm text-white' download>Download brochure</a>
             <p className='text-sm text-white px-2'>|</p>
-            <a className='text-sm text-white'>Download unit plans</a>
+            <a href='/purcell-unit-plans.pdf' className='text-sm text-white' download>Download unit plans</a>
           </div>
         </Container>
       </aside>
