@@ -8,8 +8,11 @@ import H2 from '@/components/H2'
 
 const inter = Inter({ subsets: ['latin'] })
 
-const Bold: FC<{ children: string }> = props =>
+const BoldParagraph: FC<{ children: string }> = props =>
     <p className='font-bold' {...props} />
+
+const BoldSpan: FC<{ children: string }> = props =>
+    <span className='font-bold' {...props} />
 
 const Content = () => {
     return (
@@ -21,7 +24,6 @@ const Content = () => {
                     <div className='space-y-4'>
                         <H2>Privacy policy</H2>
                         <p className='text-white space-y-4'>
-                            Privacy Policy
                             <br />
                             Last updated: February 13, 2023
                             <br />
@@ -35,141 +37,216 @@ const Content = () => {
                         </p>
                     </div>
                     <div className='text-white space-y-4'>
-                        <Bold>Interpretation</Bold>
+                        <H2>Interpretation and definitions</H2>
+                        <H3>Interpretation</H3>
                         <p className='text-white'>
                             The words of which the initial letter is capitalized have meanings defined under the
                             following conditions. The following definitions shall have the same meaning regardless of
                             whether they appear in singular or in plural.
                         </p>
-                        <Bold>Definitions</Bold>
+                        <H3>Definitions</H3>
                         <p className='text-white'>
-                            Age requirement; authority. In order to use the site, you must be at least 18 years of
-                            age. You represent that (i) you have read and understood, and that you agree to be
-                            bound by, this agreement and (ii) you are at least 18 years old. If you do not agree to, or
-                            cannot comply with, any of these terms and conditions of this agreement, please do not
-                            attempt to access this site.
-                            We reserve the right to restrict certain areas of information on this site to our approved
-                            registered users. In the event that any area of the site requires you to register with us
-                            prior to our granting you access to such areas of the site, you agree to provide truthful
-                            information, including but not limited to a member name and password as well as your
-                            name, address, telephone number and a valid email address (the &quot;account
-                            information&quot;). You agree to provide accurate account information and to update your
-                            account information as necessary to keep it accurate. You are solely responsible for
-                            maintaining the confidentiality of your member name and password. You agree to notify
-                            us immediately of any unauthorized use of your member name, password or account.
-                            The site owner will not be responsible for any losses arising out of the unauthorized use
-                            of your account and you agree to indemnify and hold harmless the site owner, its
-                            partners, parents, subsidiaries, agents, affiliates and/or licensors, as applicable, for any
-                            improper, unauthorized or illegal uses of your account.
+                            For the purposes of this Privacy Policy:
+                        </p>
+                        <BoldSpan>Account</BoldSpan> means a unique account created for You to access our Service or parts of
+                        our Service.
+                        <BoldSpan>Affiliate</BoldSpan> means an entity that controls, is controlled by or is under common control
+                        with a party, where &quot;control&quot; means ownership of 50% or more of the shares, equity
+                        interest or other securities entitled to vote for election of directors or other
+                        managing authority.
+                        <BoldSpan>Company</BoldSpan> (referred to as either &quot;the Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in this
+                        Agreement) refers to Purcell Business Centre.
+                        <BoldSpan>Cookies</BoldSpan> are small files that are placed on Your computer, mobile device or any
+                        other device by a website, containing the details of Your browsing history on that
+                        website among its many uses.
+                        <BoldSpan>Country</BoldSpan> refers to: British Columbia, Canada
+                        <BoldSpan>Device</BoldSpan> means any device that can access the Service such as a computer, a
+                        cellphone or a digital tablet.
+                        <BoldSpan>Personal Data</BoldSpan> is any information that relates to an identified or identifiable
+                        individual.
+                        <BoldSpan>Service</BoldSpan> refers to the Website.
+                        <BoldSpan>Service Provider</BoldSpan> means any natural or legal person who processes the data on
+                        behalf of the Company. It refers to third-party companies or individuals employed
+                        by the Company to facilitate the Service, to provide the Service on behalf of the
 
-                        </p>
-                        <Bold>License to Use the Site</Bold>
-                        <p className='text-white'>
-                            We grant to you a limited, non-exclusive, non-transferable license to access and use the
-                            site in accordance with the terms and conditions set forth in this agreement. We reserve
-                            all right, title and interest not expressly granted under this license to the fullest extent
-                            possible under applicable laws. Any use of the site not specifically permitted under this
-                            agreement is strictly prohibited.
-                            You agree that you will not: (i) use the site to reproduce, transmit, display or distribute
-                            copyrighted material in any medium or via any method without our express written
+                        Company, to perform services related to the Service or to assist the Company in
+                        analyzing how the Service is used.
+                        <BoldSpan>Third-party Social Media Service</BoldSpan> refers to any website or any social network
+                        website through which a User can log in or create an account to use the Service.
+                        <BoldSpan>Usage Data</BoldSpan> refers to data collected automatically, either generated by the use of the
+                        Service or from the Service infrastructure itself (for example, the duration of a page
+                        visit).
+                        <BoldSpan>Website</BoldSpan> refers to Purcell Business Centre, accessible from
+                        www.purcellbusinesscentre.com
+                        <BoldSpan>You</BoldSpan> means the individual accessing or using the Service, or the company, or other
+                        legal entity on behalf of which such individual is accessing or using the Service, as
+                        applicable.
 
-                            permission; (ii) copy, store, edit, change, prepare any derivative work of or alter in any
-                            way any of the content provided on this site; or (iii) use our site in any way that violates
-                            the terms of this agreement. The site is owned by us and is protected by Canadian
-                            copyright laws and international treaty provisions. You will not sublicense, assign, or
-                            transfer the license granted to you under this agreement. Any attempt to sublicense,
-                            assign, or transfer any of the rights, duties, or obligations in violation of the provisions of
-                            this agreement is void.
-                            You agree that you will not: (a) impersonate any person or entity or misrepresent your
-                            affiliation with any other person or entity; (b) engage in spamming, flooding, harvesting
-                            of e-mail addresses or other personal information, spidering, screen scraping, database
-                            scraping, or any other activity with the purpose of obtaining lists of users or any other
-                            information, including specifically, property listings available through the site; (c) send
-                            chain letters or pyramid schemes via the site; or (d) attempt to gain unauthorized
-                            access to other computer systems through the site. You agree that you will not use the
-                            site in any manner that could damage, disable, overburden, or impair the site or
-                            interfere with any other party&#39;s use and enjoyment of the site.
-                        </p>
-                        <Bold>Intellectual Property</Bold>
+                        <H2>Collecting and using your personal data</H2>
+                        <H3>Types of data collected</H3>
+                        <BoldParagraph>Personal data</BoldParagraph>
                         <p className='text-white'>
-                            You acknowledge that we own or have a license to all title and copyrights in and to the
-                            content provided on this site. All title and intellectual property rights in and to any
-                            licensed content provided on this site is the property of the respective content owners
-                            and may be protected by applicable copyright or other intellectual property laws and
-                            treaties and subject to use restrictions under such laws or treaties.
-                            Photos herein are the property of their respective owners and use of these images
-                            without the express written consent of the owner is prohibited.
+                            While using Our Service, We may ask You to provide Us with certain personally identifiable
+                            information that can be used to contact or identify You. Personally identifiable information
+                            may include, but is not limited to:
+                            <ul>
+                                <li>
+                                    Email address
+                                </li>
+                                <li>
+                                    First name and last name
+                                </li>
+                                <li>
+                                    Phone number
+                                </li>
+                                <li>
+                                    Address, State, Province, ZIP/Postal code, City
+                                </li>
+                                <li>
+                                    Usage Data
+                                </li>
+                            </ul>
                         </p>
-                        <Bold>Submissions or Other Information</Bold>
+                        <BoldParagraph>Usage data</BoldParagraph>
                         <p className='text-white'>
-                            If you submit to us or post on the site any property listing, testimonial, comment, review,
-                            suggestion or any work of authorship (collectively a &quot;submission&quot;) including, without
-                            limitation, submissions about any of our products or services, such submission will not
-                            be confidential or secret, and may be used by us in any manner. Please do not submit
-                            or send any submission to us that you consider contains confidential or proprietary
-                            information. No submission sent to us will be considered or treated as confidential
-                            information. We do not pre-screen submissions and we will have no obligation to read
-                            any particular submission submitted or sent to us. By submitting or sending a
-                            submission to us, you: (i) represent and warrant that the submission is original to you,
-                            that no other party has any rights thereto, and that any &quot;moral rights&quot; in such
-                            submission have been waived, and (ii) you grant us a royalty-free, unrestricted,
-                            worldwide, perpetual, irrevocable, non-exclusive and fully transferable, assignable and
-                            sublicensable right and license to use, reproduce, publish, distribute, display, translate,
-                            summarize, modify and adapt such submission (in whole or part) and/or to incorporate it
-                            in other works in any form, media, or technology now known or later developed, in our
-                            sole discretion, with or without your name.
+                            Usage Data is collected automatically when using the Service.
+                            Usage Data may include information such as Your Device&#39;s Internet Protocol address (e.g. IP
+                            address), browser type, browser version, the pages of our Service that You visit, the time
+                            and date of Your visit, the time spent on those pages, unique device identifiers and other
+                            diagnostic data.
+                            When You access the Service by or through a mobile device, We may collect certain
+                            information automatically, including, but not limited to, the type of mobile device You use,
+                            Your mobile device unique ID, the IP address of Your mobile device, Your mobile operating
+                            system, the type of mobile Internet browser You use, unique device identifiers and other
+                            diagnostic data.
+                            We may also collect information that Your browser sends whenever You visit our Service or
+                            when You access the Service by or through a mobile device.
                         </p>
-                        <Bold>Term</Bold>
+                        <BoldParagraph>Retention of your personal data</BoldParagraph>
                         <p className='text-white'>
-                            This agreement will remain effective until terminated by us.
+                            The Company will retain Your Personal Data only for as long as is necessary for the
+                            purposes set out in this Privacy Policy. We will retain and use Your Personal Data to the
+                            extent necessary to comply with our legal obligations (for example, if we are required to
+                            retain your data to comply with applicable laws), resolve disputes, and enforce our legal
+                            agreements and policies.
+                            The Company will also retain Usage Data for internal analysis purposes. Usage Data is
+                            generally retained for a shorter period of time, except when this data is used to strengthen
+                            the security or to improve the functionality of Our Service, or We are legally obligated to
+                            retain this data for longer time periods.
                         </p>
-                        <Bold>Limitation of Liability</Bold>
+                        <BoldParagraph>Transfer of Your Personal Data</BoldParagraph>
                         <p className='text-white'>
-                            In no event will we be liable to you for indirect, general, special, incidental,
-                            consequential, exemplary or other damages (including, without limitation, damages for
-                            loss of profits, business interruption, corruption of files, loss of business information or
-                            any other pecuniary loss) even if we have been advised of the possibility of such
-                            damages. No oral or written information or advice given by us or others will create a
-                            warranty and neither you nor any third party may rely on any such information or advice.
-                            Some jurisdictions do not allow the exclusion of implied warranties or limitation or
-                            exclusion of liability for incidental or consequential damages, so the above exclusions
-                            and limitations may or may not apply to you.
+                            Your information, including Personal Data, is processed at the Company&#39;s operating offices
+                            and in any other places where the parties involved in the processing are located. It means
+                            that this information may be transferred to — and maintained on — computers located
+                            outside of Your state, province, country or other governmental jurisdiction where the data
+                            protection laws may differ than those from Your jurisdiction.
+                            Your consent to this Privacy Policy followed by Your submission of such information
+                            represents Your agreement to that transfer.
+                            The Company will take all steps reasonably necessary to ensure that Your data is treated
+                            securely and in accordance with this Privacy Policy and no transfer of Your Personal Data
+                            will take place to an organization or a country unless there are adequate controls in place
+                            including the security of Your data and other personal information.
                         </p>
-                        <Bold>Indemnity</Bold>
+                        <BoldParagraph>Delete your personal data</BoldParagraph>
                         <p className='text-white'>
-                            You will indemnify and hold us, our directors, officers, employees, affiliates, agents,
-                            contractors, and licensors harmless with respect to any suits or claims arising out of (i)
-                            your breach of this agreement, including, but not limited to, any infringement by you of
-                            the copyright or intellectual property rights of any third party; or (ii) your use or misuse of
-                            the site.
+                            You have the right to delete or request that We assist in deleting the Personal Data that We
+                            have collected about You.
+                            Our Service may give You the ability to delete certain information about You from within
+                            the Service.
+                            You may update, amend, or delete Your information at any time by signing in to Your
+                            Account, if you have one, and visiting the account settings section that allows you to manage
+                            Your personal information. You may also contact Us to request access to, correct, or delete
+                            any personal information that You have provided to Us.
+                            Please note, however, that We may need to retain certain information when we have a legal
+                            obligation or lawful basis to do so.
                         </p>
-                        <Bold>Other</Bold>
+                        <H3>Disclosure of Your Personal Data</H3>
+                        <BoldParagraph>Business transactions</BoldParagraph>
                         <p className='text-white'>
-                            You agree that you will comply with all applicable laws, including, but not limited to,
-                            privacy laws and individual Provincial laws applicable to you with respect to the sale or
-                            lease of real property.
-                            We may present advertisements or promotional materials on or through the site. Your
-                            dealings with, or participation in promotions of, any third-party advertisers on or through
-                            the site are solely between you and such third party and your participation is subject to
-                            the terms and conditions associated with that advertisement or promotion. You agree
-                            that we are not responsible or liable for any loss or damage of any sort incurred as the
-                            result of any such dealings or as the result of the presence of such third party materials
-                            on the site.
-                            This agreement will be governed by the laws of the Province of British Columbia. The
-                            exclusive jurisdiction for any claim, action or dispute with us or relating in any way to
-                            your use of the site will be in the Provincial and federal courts of the Province of British
-                            Columbia.
-                            We may send notices to you with respect to your use of the site by sending an email
-                            message to the email address listed in your account information, by sending a letter via
-                            regular mail to the contact address listed in your account information, or by a posting a
-                            note on the site when you access your account. You agree that we may provide notice
-                            to you through such means. Unless otherwise stated in the notices, the notices will
-                            become effective immediately.
-                            You acknowledge that you have read this agreement, understand it and will be bound
-                            by its terms and conditions. You further acknowledge that this agreement represents the
-                            complete and exclusive statement of the agreement between us and that it supersedes
-                            any proposal or prior agreement oral or written, and any other communications between
-                            us relating to the subject matter of this agreement.
+                            If the Company is involved in a merger, acquisition or asset sale, Your Personal Data may be
+                            transferred. We will provide notice before Your Personal Data is transferred and becomes
+                            subject to a different Privacy Policy.
+                        </p>
+                        <BoldParagraph>Law enforcement</BoldParagraph>
+                        <p className='text-white'>
+                            Under certain circumstances, the Company may be required to disclose Your Personal Data
+                            if required to do so by law or in response to valid requests by public authorities (e.g. a court
+                            or a government agency).
+                        </p>
+                        <BoldParagraph>Other legal requirements</BoldParagraph>
+                        <p className='text-white'>
+                            The Company may disclose Your Personal Data in the good faith belief that such action is
+                            necessary to:
+                        </p>
+                        <ul>
+                            <li>
+                                Comply with a legal obligation
+                            </li>
+                            <li>
+                                Protect and defend the rights or property of the Company
+                            </li>
+                            <li>
+                                Prevent or investigate possible wrongdoing in connection with the Service
+                            </li>
+                            <li>
+                                Protect the personal safety of Users of the Service or the public
+                            </li>
+                            <li>
+                                Protect against legal liability
+                            </li>
+                        </ul>
+                        <BoldParagraph>Security of Your Personal Data</BoldParagraph>
+                        <p className='text-white'>
+                            The security of Your Personal Data is important to Us, but remember that no method of
+                            transmission over the Internet, or method of electronic storage is 100% secure. While We
+                            strive to use commercially acceptable means to protect Your Personal Data, We cannot
+                            guarantee its absolute security.
+                        </p>
+                    </div>
+                    <div className='text-white space-y-4'>
+                        <H2>Children's privacy</H2>
+                        <p className='text-white'>
+                            Our Service does not address anyone under the age of 18. We do not knowingly collect
+                            personally identifiable information from anyone under the age of 18. If You are a parent or
+                            guardian and You are aware that Your child has provided Us with Personal Data, please
+
+                            contact Us. If We become aware that We have collected Personal Data from anyone under
+                            the age of 18 without verification of parental consent, We take steps to remove that
+                            information from Our servers.
+                            If We need to rely on consent as a legal basis for processing Your information and Your
+                            country requires consent from a parent, We may require Your parent&#39;s consent before We
+                            collect and use that information.
+                        </p>
+                    </div>
+                    <div className='text-white space-y-4'>
+                        <H2>Links to other websites</H2>
+                        <p className='text-white'>
+                            Our Service may contain links to other websites that are not operated by Us. If You click on a
+                            third party link, You will be directed to that third party&#39;s site. We strongly advise You to
+                            review the Privacy Policy of every site You visit.
+                            We have no control over and assume no responsibility for the content, privacy policies or
+                            practices of any third party sites or services.
+                        </p>
+                    </div>
+                    <div className='text-white space-y-4'>
+                        <H2>Changes to this privacy policy</H2>
+                        <p className='text-white'>
+                            We may update Our Privacy Policy from time to time. We will notify You of any changes by
+                            posting the new Privacy Policy on this page.
+                            We will let You know via email and/or a prominent notice on Our Service, prior to the
+                            change becoming effective and update the &quot;Last updated&quot; date at the top of this Privacy
+                            Policy.
+                            You are advised to review this Privacy Policy periodically for any changes. Changes to this
+                            Privacy Policy are effective when they are posted on this page.
+                        </p>
+                    </div>
+                    <div className='text-white space-y-4'>
+                        <H2>Contact us</H2>
+                        <p className='text-white'>
+                            If you have any questions about this Privacy Policy, You can contact us:
+                            By email: tristan@tristanchartcommercial.com
+                            By phone number: 2507777493
                         </p>
                     </div>
                 </Container>
