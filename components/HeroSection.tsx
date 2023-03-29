@@ -1,3 +1,4 @@
+import useNav from "@/hooks/useNav"
 import { FC, ForwardedRef, forwardRef, ReactElement } from "react"
 import Container from "./Container"
 import H2 from "./H2"
@@ -12,9 +13,11 @@ const HeroButton: FC<{ children: string }> = props =>
 const HeroHeading: FC<{ children: any }> = props =>
     <h1 className="text-white text-[64px] font-bold leading-[1]" {...props} />
 
-function HeroSection(props: {}, ref: ForwardedRef<any>) {
+function HeroSection(props: {}) {
+    const ref = useNav('home')
+
     return (
-        <div id='home'>
+        <div ref={ref} id='home-section'>
             <div className='relative' style={{
                 backgroundImage: 'url(/img/purcell-hero.png)',
                 backgroundSize: 'cover',
@@ -29,7 +32,6 @@ function HeroSection(props: {}, ref: ForwardedRef<any>) {
                             <HeroButton>Register now</HeroButton>
                         </div>
                     </HeroPanel>
-                    <div ref={ref} />
                 </Container>
             </div>
             <div

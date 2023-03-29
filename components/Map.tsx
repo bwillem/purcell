@@ -8,10 +8,10 @@ function Map() {
             <GoogleMap
                 mapContainerStyle={{ height: '100%', width: '100%' }}
                 center={{
-                    lat: -3.745,
-                    lng: -38.523,
+                    lat: 49.493,
+                    lng: -117.295,
                 }}
-                zoom={10}
+                zoom={15}
             />
         </LoadScript>
     )

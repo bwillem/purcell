@@ -3,11 +3,13 @@ import Container from './Container';
 import Supertitle from './Supertitle';
 import H2 from './H2';
 import { forwardRef } from 'react';
+import useNav from '@/hooks/useNav';
 
-const Location = forwardRef<HTMLDivElement, {}>((props, ref) => {
+const Location = forwardRef<HTMLDivElement, {}>((props) => {
+    const ref = useNav('location')
+
     return (
-        <div id='location'>
-            <div ref={ref} />
+        <div ref={ref} id='location-section'>
             <div className='w-full lg:flex lg:relative h-auto lg:h-[660px]'>
                 <div className='hidden lg:block w-1/2'>
                 </div>

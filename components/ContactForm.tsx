@@ -14,6 +14,7 @@ import Supertitle from "./Supertitle";
 import { CgSpinner } from 'react-icons/cg'
 import { useForm } from "react-hook-form";
 import classNames from "classnames";
+import useNav from "@/hooks/useNav";
 
 const Label: FC<LabelHTMLAttributes<HTMLLabelElement>> = ({ className, ...rest }) => {
     return <label
@@ -76,6 +77,8 @@ export default function ContactForm() {
 
     const { register, handleSubmit, formState: { errors } } = useForm()
 
+    const ref = useNav('register')
+
     const onSubmit = handleSubmit(async values => {
         console.log('values', values)
         setLoading(true)
@@ -100,46 +103,8 @@ export default function ContactForm() {
         setLoading(false)
     })
 
-    // const onSubmit: FormEventHandler<HTMLFormElement> = async e => {
-    //     e.preventDefault()
-    //     setLoading(true)
-    //     setError('')
-    //     setSuccess('')
-
-    //     const data = {
-    //         // @ts-ignore
-    //         name: e.target.name?.value,
-    //         // @ts-ignore
-    //         email: e.target.email?.value,
-    //         // @ts-ignore
-    //         message: e.target.message?.value,
-    //     }
-
-    //     if (!data.name?.length) return setError('Name required')
-    //     if (!data.message.length) return setError('Message required')
-    //     if (Boolean(!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(data.email))) return setError('Invalid email')
-
-    //     try {
-    //         const r = await fetch('/api/contact', {
-    //             method: 'post',
-    //             body: JSON.stringify(data),
-    //         })
-    //         if (!r.ok) {
-    //             console.error((await r.json()))
-    //             return setError('Server error')
-    //         }
-    //         setSuccess("Thank you for your interest! We'll be in touch as soon as possible.")
-    //         formRef.current?.reset()
-    //     } catch (e) {
-    //         console.error(e)
-    //         setError('Error')
-    //     }
-
-    //     setLoading(false)
-    // }
-
     return (
-        <div id='register' className="bg-primary">
+        <div ref={ref} id='register-section' className="bg-primary">
             <form onSubmit={onSubmit} ref={formRef}>
                 <Container className="py-24 space-y-8 max-w-prose">
                     <Supertitle className="text-white">Register for more information</Supertitle>

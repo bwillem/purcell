@@ -1,13 +1,15 @@
+import useNav from "@/hooks/useNav"
 import { forwardRef } from "react"
 import Container from "./Container"
 import H2 from "./H2"
 import H3 from "./H3"
 import Supertitle from "./Supertitle"
 
-const Ownership = forwardRef<HTMLDivElement, {}>((props, ref) => {
+const Ownership = forwardRef<HTMLDivElement, {}>(props => {
+    const ref = useNav('ownership')
+
     return (
-        <div id='ownership'>
-            <div ref={ref} />
+        <div ref={ref} id='ownership-section'>
             <Container className="py-24 space-y-8">
                 <Supertitle className="text-black max-w-[20em]">
                     Why owning your real estate is a smart business decision

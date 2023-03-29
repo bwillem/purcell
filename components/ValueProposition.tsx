@@ -1,3 +1,4 @@
+import useNav from "@/hooks/useNav"
 import { FC, forwardRef } from "react"
 import Container from "./Container"
 import H2 from "./H2"
@@ -6,10 +7,11 @@ import Supertitle from "./Supertitle"
 
 const Bold: FC<{ children: string }> = p => <span className='font-bold' {...p} />
 
-const ValueProposition = forwardRef<HTMLDivElement, {}>((props, ref) => {
+const ValueProposition = forwardRef<HTMLDivElement, {}>((props) => {
+    const ref = useNav('value')
+
     return (
-        <div className="bg-primary-dark" id='value'>
-            <div ref={ref} />
+        <div ref={ref} className="bg-primary-dark" id='value-section'>
             <Container className="py-24 items-center flex flex-wrap">
                 <div className='space-y-8 w-full lg:w-1/2 pr-24'>
                     <Supertitle className="text-white">Value proposition</Supertitle>

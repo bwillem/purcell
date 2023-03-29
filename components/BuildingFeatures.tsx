@@ -4,10 +4,13 @@ import Supertitle from "./Supertitle";
 import Li from './Li'
 import Ul from './Ul'
 import Container from "./Container";
+import useNav from "@/hooks/useNav";
 
-const BuildingFeatures = forwardRef<HTMLDivElement, {}>((props, ref) => {
+const BuildingFeatures = forwardRef<HTMLDivElement, {}>((props) => {
+    const ref = useNav('features')
+
     return (
-        <div id='features'>
+        <div ref={ref} id='features-section'>
             <div className='bg-primary-dark'>
                 <Container className='py-24'>
                     <div className='text-center space-y-8'>
@@ -92,7 +95,6 @@ const BuildingFeatures = forwardRef<HTMLDivElement, {}>((props, ref) => {
                     </div>
                 </Container>
             </div>
-            <div ref={ref} />
             <div className='h-[400px]' style={{
                 backgroundImage: `url(/img/purcell-business-center-cross-section.png)`,
                 backgroundRepeat: 'no-repeat',

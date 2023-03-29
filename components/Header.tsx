@@ -1,6 +1,8 @@
 import { slide as Menu } from 'react-burger-menu'
 import { FC } from "react"
 import Container from './Container'
+import useStore from '@/store'
+import useNav from '@/hooks/useNav'
 
 const RegisterButton: FC<{ children: string, href: string }> = props =>
   <a
@@ -8,15 +10,28 @@ const RegisterButton: FC<{ children: string, href: string }> = props =>
     {...props}
   />
 
-const NavLink: FC<{ active?: boolean, children: string, href: string }> = ({ active, ...rest }) => {
-  const colour = active ? 'text-white' : 'text-primary-light'
-  return <a className={`text-base ml-3 first:ml-0 ${colour}`} {...rest} />
+const NavLink: FC<{ id: string, children: string }> = ({ id, ...rest }) => {
+  const { activeLinkId, setActiveLinkId } = useStore(({ activeLinkId, setActiveLinkId }) =>
+    ({ activeLinkId, setActiveLinkId }))
+
+  const onClick = () => {
+    document.getElementById(`${id}-section`)?.scrollIntoView({ behavior: 'smooth' })
+    setActiveLinkId(id)
+  }
+
+  const colour = activeLinkId === id ? 'text-white' : 'text-primary-light'
+
+  return <a
+    id={id}
+    className={`text-base ml-3 first:ml-0 ${colour}`}
+    onClick={onClick}
+    {...rest} />
 }
 
 const Wordmark: FC = () =>
   <h1 className='py-2 px-4 inline text-white border-white border text-base uppercase tracking-widest'>Purcell Business Center</h1>
 
-function Header({ activeSection = '' }) {
+function Header() {
   return (
     <div className='w-full fixed [z-index:9]'>
       <aside className="w-full bg-brand">
@@ -46,14 +61,14 @@ function Header({ activeSection = '' }) {
             </Menu>
           </div>
           <nav className='flex items-center hidden lg:block'>
-            <NavLink href='#home' active={activeSection === 'home'}>Home</NavLink>
-            <NavLink href='#features' active={activeSection === 'features'}>Building Features</NavLink>
-            <NavLink href='#location' active={activeSection === 'location'}>Location</NavLink>
-            <NavLink href='#value' active={activeSection === 'value'}>Value Proposition</NavLink>
-            <NavLink href='#ownership' active={activeSection === 'ownership'}>Ownership</NavLink>
-            <NavLink href='#financing' active={activeSection === 'financing'}>Financing</NavLink>
-            <NavLink href='#project' active={activeSection === 'project'}>Project Team</NavLink>
-            <RegisterButton href='#register'>Register Now</RegisterButton>
+            <NavLink id='home'>Home</NavLink>
+            <NavLink id='features'>Building Features</NavLink>
+            <NavLink id='location'>Location</NavLink>
+            <NavLink id='value'>Value Proposition</NavLink>
+            <NavLink id='ownership'>Ownership</NavLink>
+            <NavLink id='financing'>Financing</NavLink>
+            <NavLink id='project'>Project Team</NavLink>
+            <RegisterButton id='register'>Register Now</RegisterButton>
           </nav>
         </Container>
       </header>

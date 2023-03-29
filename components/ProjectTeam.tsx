@@ -2,11 +2,13 @@ import { forwardRef } from "react"
 import Supertitle from "./Supertitle"
 import H4 from "./H4"
 import Container from "./Container"
+import useNav from "@/hooks/useNav"
 
-const ProjectTeam = forwardRef<HTMLDivElement, {}>((props, ref) => {
+const ProjectTeam = forwardRef<HTMLDivElement, {}>((props) => {
+    const ref = useNav('project')
+
     return (
-        <div id='project' className="bg-primary-dark">
-            <div ref={ref} />
+        <div ref={ref} id='project-section' className="bg-primary-dark">
             <Container className="space-y-12 py-24">
                 <Supertitle className="text-white">
                     Project team
