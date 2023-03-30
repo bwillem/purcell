@@ -104,6 +104,19 @@ Note: Beware of modifying this element as it can break the animations - you shou
   background-color: #1C1C1C;
 }
 
+.concept:after {
+  content: 'Concept rendering';
+  color: rgb(210, 210, 210);
+  font-size: 14px;
+  background: rgba(0,0,0,0.5);
+  border-radius: 5px;
+  padding-left: 6px;
+  padding-right: 6px;
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+}
+
 @media (min-width: 900px) {
   .half-image {
     background: url(/img/purcell-business-center.png) no-repeat;

@@ -83,7 +83,7 @@ const Ownership = forwardRef<HTMLDivElement, {}>(props => {
                         </p>
                     </div>
                     <div className="hidden lg:block lg:w-1/2">
-                        <div className="max-w-[24em] mx-auto">
+                        <div className="max-w-[24em] mx-auto relative concept">
                             <img src='/img/purcell-front.png' />
                         </div>
                     </div>

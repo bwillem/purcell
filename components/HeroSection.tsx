@@ -18,7 +18,7 @@ function HeroSection(props: {}) {
 
     return (
         <div ref={ref} id='home-section'>
-            <div className='relative' style={{
+            <div className='relative concept' style={{
                 backgroundImage: 'url(/img/purcell-hero.png)',
                 backgroundSize: 'cover',
                 height: 'calc(100vh)',
@@ -35,7 +35,7 @@ function HeroSection(props: {}) {
                 </Container>
             </div>
             <div
-                className='w-full flex half-image'
+                className='w-full flex half-image concept relative'
             >
                 <Container>
                     <div className='w-full lg:w-1/2 py-24 space-y-8'>

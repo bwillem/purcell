@@ -95,7 +95,7 @@ const BuildingFeatures = forwardRef<HTMLDivElement, {}>((props) => {
                     </div>
                 </Container>
             </div>
-            <div className='h-[400px]' style={{
+            <div className='h-[400px] concept relative' style={{
                 backgroundImage: `url(/img/purcell-business-center-cross-section.png)`,
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center',

@@ -1,6 +1,3 @@
-import {
-  MutableRefObject,
-} from 'react';
 import BuildingFeatures from './BuildingFeatures';
 import ContactForm from './ContactForm';
 import Financing from './Financing';
