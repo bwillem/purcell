@@ -2,13 +2,21 @@ import { slide as Menu } from 'react-burger-menu'
 import { FC } from "react"
 import Container from './Container'
 import useStore from '@/store'
-import useNav from '@/hooks/useNav'
 
-const RegisterButton: FC<{ children: string, href: string }> = props =>
-  <a
+const RegisterButton: FC<{ children: string, id: string }> = ({ id, ...rest }) => {
+  const { setActiveLinkId } = useStore(({ activeLinkId, setActiveLinkId }) =>
+    ({ activeLinkId, setActiveLinkId }))
+
+  const onClick = () => {
+    document.getElementById(`${id}-section`)?.scrollIntoView({ behavior: 'smooth' })
+    setActiveLinkId(id)
+  }
+
+  return <a
     className='border-primary-light border ml-3 py-1 px-3 text-primary-light hover:text-white hover:border-white transition-all hover:no-underline'
-    {...props}
+    {...rest}
   />
+}
 
 const NavLink: FC<{ id: string, children: string }> = ({ id, ...rest }) => {
   const { activeLinkId, setActiveLinkId } = useStore(({ activeLinkId, setActiveLinkId }) =>
@@ -29,7 +37,8 @@ const NavLink: FC<{ id: string, children: string }> = ({ id, ...rest }) => {
 }
 
 const Wordmark: FC = () =>
-  <h1 className='py-2 px-4 inline text-white border-white border text-base uppercase tracking-widest'>Purcell Business Center</h1>
+  <img alt='purcell business center logo' src='/img/purcell_logo.png' />
+// <h1 className='py-2 px-4 inline text-white border-white border text-base uppercase tracking-widest'>Purcell Business Center</h1>
 
 function Header() {
   return (
@@ -45,7 +54,7 @@ function Header() {
       </aside>
       <header className='bg-primary-dark'>
         <Container className='py-4 block xl:flex w-full items-center justify-between'>
-          <div className='pt-0 pb-0 lg:pt-2 lg:pb-5 xl:pt-0 xl:pb-0' >
+          <div className='pt-0 pb-0 lg:pt-2 lg:pb-5 xl:pt-0 xl:pb-0 max-w-[200px]' >
             <Wordmark />
           </div>
           <div className='lg:hidden'>

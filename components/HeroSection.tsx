@@ -5,7 +5,7 @@ import H2 from "./H2"
 import Supertitle from "./Supertitle"
 
 const HeroPanel: FC<{ children: ReactElement[] }> = props =>
-    <div className="absolute top-[50%] [transform:translateY(-50%)] w-[90%] md:w-[75%] lg:w-1/2 space-y-2 px-12 lg:px-24 py-12 bg-[rgba(0,0,0,.5)]" {...props} />
+    <div className="absolute top-[50%] [transform:translateY(-50%)] w-[90%] md:w-[75%] lg:w-[50%] xl:w-[40%] space-y-2 px-12 lg:px-24 py-12 bg-[rgba(0,0,0,.5)]" {...props} />
 
 const HeroButton: FC<{ children: string }> = props =>
     <button className="px-4 py-3 bg-white uppercase" {...props} />
@@ -25,6 +25,9 @@ function HeroSection(props: {}) {
             }}>
                 <Container className='px-4'>
                     <HeroPanel>
+                        <div className="max-w-[48px] pb-4">
+                            <img alt='purcell logo icon' src='img/pb_icon.png' />
+                        </div>
                         <Supertitle className="text-white">For sale</Supertitle>
                         <div className="space-y-8">
                             <HeroHeading>Purcell<br />Business<br />Centre</HeroHeading>
