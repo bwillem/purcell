@@ -60,10 +60,10 @@ const Location = forwardRef<HTMLDivElement, {}>((props) => {
                             <img src='/img/nelson-golf.png' />
                         </div>
                         <div>
-                            <img src='/img/nelson-food.png' />
+                            <img src='/img/nelson-skier.png' />
                         </div>
                         <div>
-                            <img src='/img/nelson-town.png' />
+                            <img src='/img/nelson-hotel.jpg' />
                         </div>
                         <div>
                             <img src='/img/nelson-street.png' />

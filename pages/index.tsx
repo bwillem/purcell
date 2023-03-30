@@ -11,7 +11,7 @@ export default function Home() {
         <title>Purcell Business Center</title>
         <meta name="description" content="Purcell Business Center | Nelson, BC" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <main className={inter.className}>
         <App />
