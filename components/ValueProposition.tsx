@@ -40,7 +40,7 @@ const ValueProposition = forwardRef<HTMLDivElement, {}>((props) => {
                                 <p><Bold>Vacancy: </Bold>1.6%</p>
                             </div>
                             <div className='mr-8'>
-                                <p><Bold>Asking Lease Rates PSF: </Bold>+$18.00</p>
+                                <p><Bold>Asking Lease Rates PSF: </Bold>+$19.00</p>
                             </div>
                             <div className='mr-8'>
                                 <p><Bold>Strata Pricing PSF: </Bold>+$465</p>
@@ -50,12 +50,11 @@ const ValueProposition = forwardRef<HTMLDivElement, {}>((props) => {
                 </div>
             </Container>
             <div className='h-[633px] lg:h-[800px] relative concept' style={{
-                backgroundImage: `url(/img/purcell-top.png)`,
+                backgroundImage: `url(/img/purcell-birds-eye.jpg)`,
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
             }}>
-
             </div>
         </div>
     )

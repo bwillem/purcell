@@ -12,15 +12,12 @@ const Ownership = forwardRef<HTMLDivElement, {}>(props => {
         <div ref={ref} id='ownership-section'>
             <Container className="py-24 space-y-8">
                 <Supertitle className="text-black max-w-[20em]">
-                    Why owning your real estate is a smart business decision
+                    BENEFITS OF REAL ESTATE OWNERSHIP
                 </Supertitle>
                 <div className="flex flex-wrap lg:flex-nowrap space-y-12 lg:space-y-0 lg:space-x-12">
                     <div className="w-full lg:w-1/3 space-y-8">
                         <p className='text-black'>
                             Whether purchasing real estate for the certainty of your business operation, or for the opportunity to invest, Purcell Business Centre offers the opportunity to own a newly upgraded strata unit, renovated by a trusted developer in a professionally managed building. As one of the highest quality industrial buildings in the Kootenays, combined with an extensive list of newly installed building and mechanical systems, the risk of significant capital repairs has been substantially minimized over the first 10 years, providing owners with carefree ownership and management.
-                        </p>
-                        <p className='text-black'>
-                            Take advantage of the rarely offered opportunity to secure industrial real estate in today’s market.
                         </p>
                     </div>
                     <div className="w-1/2 lg:w-1/3 space-y-8">
@@ -79,7 +76,7 @@ const Ownership = forwardRef<HTMLDivElement, {}>(props => {
                             Path to ownership
                         </Supertitle>
                         <p className="text-white">
-                            This is an exciting and important next step for your business, and MacDonald Communities will be there to assist you at each stage of the process. During construction, regular progress updates will be provided, so you can effectively plan your financing arrangements and coordination with legal counsel in preparation of taking ownership of your unit. During corporate signage installation and office improvement work, Macdonald Development will assist in the coordination with your contractors, so that your unit is fully move-in ready on day one. Upon occupancy, an experienced strata property manager will be available to ensure the property is well-maintained and fully managed, so you can continue to focus on the success of your core business.
+                            This is an exciting and important next step for your business, and MacDonald Communities will be there to assist you at each stage of the process. During construction, regular progress updates will be provided, so you can effectively plan your financing arrangements and coordinate with legal counsel in preparation of taking ownership of your unit. During corporate signage installation and office improvement work, Macdonald Communities will assist in the coordination with your contractors, so that your unit is fully move-in ready on day one. Upon occupancy, an experienced strata property manager will be available to ensure the property is well-maintained and fully managed, so you can continue to focus on the success of your core business.
                         </p>
                     </div>
                     <div className="hidden lg:block lg:w-1/2">

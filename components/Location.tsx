@@ -90,7 +90,7 @@ const Location = forwardRef<HTMLDivElement, {}>((props) => {
                             <div className='w-1/2'>
                                 <Supertitle className='text-white mb-4'>Local</Supertitle>
                                 <p className='text-white'>Playmor Junction — 10 mins</p>
-                                <p className='text-white'>Castlegar — 30 mins</p>
+                                <p className='text-white'>Castlegar — 25 mins</p>
                                 <p className='text-white'>Salmo — 30 mins</p>
                                 <p className='text-white'>Trail — 45 mins</p>
                                 <p className='text-white'>Kaslo — 1 hr</p>

@@ -28,35 +28,32 @@ const BuildingFeatures = forwardRef<HTMLDivElement, {}>((props) => {
                                     Zoning: Unzoned
                                 </Li>
                                 <Li>
-                                    Building Code Standard: F2 and F3 Industrial uses
+                                    Building Code Standard: F2, F3 and A2 uses
                                 </Li>
                                 <Li>
                                     Contruction: Structural steel frame, insulated walls and ceilings
                                 </Li>
                                 <Li>
-                                    Ceiling Height: 25 ft. to ceiling, 22 ft. clear to lighting
+                                    Ceiling Height: 25 ft. to ceiling, 22 ft. clear to structure
                                 </Li>
                                 <Li>
-                                    Loading: Grade level loading with 12ft.(w) x 11 ft.(h) overhead dors per unit
+                                    Loading: Grade level loading with 12ft.(w) x 11 ft.(h) overhead doors per unit
                                 </Li>
                             </Ul>
                         </div>
                         <div className='w-1/2 lg:w-1/4'>
                             <Ul>
                                 <Li>
-                                    Floor Load: X00 lbs/SF warehouse floor load capacity (6-inch slab)
+                                    Floor Load: 300 lbs/SF warehouse floor load capacity (6-inch slab)
                                 </Li>
                                 <Li>
-                                    Power: 200 amps, 102/208 volts per unit (3 phase), separately metered
+                                    Power: 600 volt, 70 amp three phase service with 120/208 volt step down transformer (~200 amps per unit), separately metered
                                 </Li>
                                 <Li>
-                                    Backup Power: Diesel-fired backup generator
+                                    Ventilation: Through-wall HRV in warehouse
                                 </Li>
                                 <Li>
-                                    Ventilation: Through-wall HRV in warehouse, A/C in office/storefront
-                                </Li>
-                                <Li>
-                                    Sprinklers: ESFR sprinkler system throughout
+                                    Sprinklers: Fully automatic wet-sprinkler system throughout
                                 </Li>
                             </Ul>
                         </div>
@@ -66,26 +63,26 @@ const BuildingFeatures = forwardRef<HTMLDivElement, {}>((props) => {
                                     Lighting: High-bay lighting installed in warehouse
                                 </Li>
                                 <Li>
-                                    Mezzanine: Structural steel mezzanine complete with guard rail and designed to X00 lbs/SF load capacity*
+                                    Mezzanine: Structural steel mezzanine complete with guard rail and designed to 100 lbs/SF load capacity
                                 </Li>
                                 <Li>
-                                    Heading: Gas-fired radiant heat in warehouse, baseboard heat in office/storefront
+                                    Heating: Gas-fired radiant heat in warehouse, electric heat in office/storefront
                                 </Li>
                                 <Li>
-                                    Signage: Available on highway-facing building exterior and site entrance pylon
+                                    Signage: Available on highway-facing building exterior and site entrance directory pylon
                                 </Li>
                             </Ul>
                         </div>
                         <div className='w-1/2 lg:w-1/4'>
                             <Ul>
                                 <Li>
-                                    Parking: +62 reserved and visitor parking stalls plus surplus lot
+                                    Parking: +79 reserved and visitor parking stalls plus additional parking on surplus lot
                                 </Li>
                                 <Li>
                                     Fibre: Fibre optic availability per unit
                                 </Li>
                                 <Li>
-                                    Bathroom: One finished bathroom per unit
+                                    Washroom: One finished bathroom per unit
                                 </Li>
                                 <Li>
                                     Storefront: One highway-faceing main unit entrance per unit
@@ -96,14 +93,14 @@ const BuildingFeatures = forwardRef<HTMLDivElement, {}>((props) => {
                 </Container>
             </div>
             <div className='h-[400px] concept relative' style={{
-                backgroundImage: `url(/img/purcell-business-center-cross-section.png)`,
+                backgroundImage: `url(/img/purcell-side-profile.jpg)`,
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
             }}></div>
             <div className='bg-primary-dark'>
                 <Container className='flex flex-wrap py-24 items-center'>
-                    <H2 className='lg:w-1/3 pr-4 pb-4 lg:pb-0'>Combining 22’-clear warehouse, with potential office or storefront space within each unit, Purcell Business Centre offers businesses the broadest range of potential uses, including:</H2>
+                    <H2 className='lg:w-1/3 pr-4 pb-4 lg:pb-0'>Combining 22’-clear warehouse, with potential office or storefront space, Purcell Business Centre offers businesses the broadest range of potential uses, including:</H2>
                     <div className='w-1/2 lg:w-1/3 px-2 max-w-prose'>
                         <Ul>
                             <Li>
