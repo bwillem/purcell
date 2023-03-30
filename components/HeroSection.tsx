@@ -19,7 +19,7 @@ function HeroSection(props: {}) {
     return (
         <div ref={ref} id='home-section'>
             <div className='relative concept' style={{
-                backgroundImage: 'url(/img/purcell-hero.png)',
+                backgroundImage: 'url(/img/purcell-hero.jpg)',
                 backgroundSize: 'cover',
                 height: 'calc(100vh)',
             }}>
@@ -31,7 +31,7 @@ function HeroSection(props: {}) {
                         <Supertitle className="text-white">For sale</Supertitle>
                         <div className="space-y-8">
                             <HeroHeading>Purcell<br />Business<br />Centre</HeroHeading>
-                            <H2>Rare Flex-Industrial Strata Opportunity in the Kootenays</H2>
+                            <H2>Rare Flex Industrial Strata Opportunity in the Kootenays</H2>
                             <HeroButton>Register now</HeroButton>
                         </div>
                     </HeroPanel>
