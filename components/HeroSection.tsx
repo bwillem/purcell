@@ -1,14 +1,25 @@
 import useNav from "@/hooks/useNav"
-import { FC, ForwardedRef, forwardRef, ReactElement } from "react"
+import { FC, forwardRef, ReactElement } from "react"
 import Container from "./Container"
 import H2 from "./H2"
 import Supertitle from "./Supertitle"
+import useStore from "@/store"
 
 const HeroPanel: FC<{ children: ReactElement[] }> = props =>
     <div className="absolute top-[50%] [transform:translateY(-50%)] w-[90%] md:w-[75%] lg:w-[50%] xl:w-[40%] space-y-2 px-12 lg:px-24 py-12 bg-[rgba(0,0,0,.5)]" {...props} />
 
-const HeroButton: FC<{ children: string }> = props =>
-    <button className="px-4 py-3 bg-white uppercase" {...props} />
+const HeroButton: FC<{ children: string }> = props => {
+    const { setActiveLinkId } = useStore(({ activeLinkId, setActiveLinkId }) =>
+        ({ activeLinkId, setActiveLinkId }))
+
+    const onClick = () => {
+        document.getElementById(`register-section`)?.scrollIntoView({ behavior: 'smooth' })
+
+        setActiveLinkId('register')
+    }
+
+    return <button onClick={onClick} className="px-4 py-3 bg-white uppercase" {...props} />
+}
 
 const HeroHeading: FC<{ children: any }> = props =>
     <h1 className="text-white text-[64px] font-bold leading-[1]" {...props} />
@@ -78,4 +89,4 @@ function HeroSection(props: {}) {
     )
 }
 
-export default forwardRef(HeroSection)
+export default HeroSection

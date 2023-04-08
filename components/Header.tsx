@@ -3,19 +3,19 @@ import { FC } from "react"
 import Container from './Container'
 import useStore from '@/store'
 
-const RegisterButton: FC<{ children: string, id: string }> = ({ id, ...rest }) => {
+const RegisterButton: FC<{ children: string }> = (props) => {
   const { setActiveLinkId } = useStore(({ activeLinkId, setActiveLinkId }) =>
     ({ activeLinkId, setActiveLinkId }))
 
   const onClick = () => {
-    document.getElementById(`${id}-section`)?.scrollIntoView({ behavior: 'smooth' })
-    setActiveLinkId(id)
+    document.getElementById(`register-section`)?.scrollIntoView({ behavior: 'smooth' })
+    setActiveLinkId('register')
   }
 
   return <button
     onClick={onClick}
     className='border-primary-light border ml-3 py-1 px-3 text-primary-light hover:text-white hover:border-white transition-all hover:no-underline'
-    {...rest}
+    {...props}
   />
 }
 
@@ -78,7 +78,7 @@ function Header() {
             <NavLink id='ownership'>Ownership</NavLink>
             <NavLink id='financing'>Financing</NavLink>
             <NavLink id='project'>Project Team</NavLink>
-            <RegisterButton id='register'>Register Now</RegisterButton>
+            <RegisterButton>Register Now</RegisterButton>
           </nav>
         </Container>
       </header>
