@@ -2,6 +2,7 @@ import Link from "next/link"
 import { FC } from "react"
 import Container from "./Container"
 import Supertitle from "./Supertitle"
+import { BsLinkedin, BsInstagram, BsFacebook } from 'react-icons/bs'
 
 const FooterLink: FC<{ children: string, href: string, download: boolean }> = props =>
     <a className='block text-white' {...props} />
@@ -17,7 +18,17 @@ function Footer() {
                         <p className='text-white text-bold'>Fair Realty Commerical</p>
                         <p className='text-white text-bold'>250-777-7493</p>
                         <p className='text-white text-bold'>tristan@tristanchartcommercial.com</p>
-                        <div className='flex'></div>
+                        <div className='flex space-x-4 mt-2'>
+                            <a href='https://www.linkedin.com/in/tristanchart/' target='_blank'>
+                                <BsLinkedin className='text-white' />
+                            </a>
+                            <a href='https://www.instagram.com/tristanchartcommercialrealty/' target='_blank'>
+                                <BsInstagram className='text-white' />
+                            </a>
+                            <a href='https://www.facebook.com/tristanchartcommercialrealty' target='_blank'>
+                                <BsFacebook className='text-white' />
+                            </a>
+                        </div>
                     </div>
                     <div className="w-1/2 lg:w-1/4">
                         <Supertitle className='text-white pb-4'>Resources</Supertitle>

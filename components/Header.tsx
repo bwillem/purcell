@@ -12,7 +12,8 @@ const RegisterButton: FC<{ children: string, id: string }> = ({ id, ...rest }) =
     setActiveLinkId(id)
   }
 
-  return <a
+  return <button
+    onClick={onClick}
     className='border-primary-light border ml-3 py-1 px-3 text-primary-light hover:text-white hover:border-white transition-all hover:no-underline'
     {...rest}
   />
