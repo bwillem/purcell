@@ -37,9 +37,25 @@ const NavLink: FC<{ id: string, children: string }> = ({ id, ...rest }) => {
     {...rest} />
 }
 
+const MobileLink: FC<{ id: string, children: string }> = ({ id, ...rest }) => {
+  const { activeLinkId, setActiveLinkId } = useStore(({ activeLinkId, setActiveLinkId }) =>
+    ({ activeLinkId, setActiveLinkId }))
+
+  const onClick = () => {
+    document.getElementById(`${id}-section`)?.scrollIntoView({ behavior: 'smooth' })
+    setActiveLinkId(id)
+  }
+
+  const colour = activeLinkId === id ? 'text-white' : 'text-primary-light'
+
+  return <a
+    id={id}
+    onClick={onClick}
+    {...rest} />
+}
+
 const Wordmark: FC = () =>
   <img alt='purcell business center logo' src='/img/purcell_logo.png' />
-// <h1 className='py-2 px-4 inline text-white border-white border text-base uppercase tracking-widest'>Purcell Business Center</h1>
 
 function Header() {
   return (
@@ -60,14 +76,14 @@ function Header() {
           </div>
           <div className='lg:hidden'>
             <Menu right>
-              <a href='#home'>Home</a>
-              <a href='#features'>Building Features</a>
-              <a href='#location'>Location</a>
-              <a href='#value'>Value Proposition</a>
-              <a href='#ownership'>Ownership</a>
-              <a href='#financing'>Financing</a>
-              <a href='#project'>Project Team</a>
-              <a href='#register'>Register Now</a>
+              <MobileLink id='home'>Home</MobileLink>
+              <MobileLink id='features'>Building Features</MobileLink>
+              <MobileLink id='location'>Location</MobileLink>
+              <MobileLink id='value'>Value Proposition</MobileLink>
+              <MobileLink id='ownership'>Ownership</MobileLink>
+              <MobileLink id='financing'>Financing</MobileLink>
+              <MobileLink id='project'>Project Team</MobileLink>
+              <MobileLink id='register'>Register Now</MobileLink>
             </Menu>
           </div>
           <nav className='flex items-center hidden lg:block'>

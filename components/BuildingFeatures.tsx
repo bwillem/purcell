@@ -1,4 +1,3 @@
-import { forwardRef } from "react";
 import H2 from "./H2";
 import Supertitle from "./Supertitle";
 import Li from './Li'
@@ -6,7 +5,7 @@ import Ul from './Ul'
 import Container from "./Container";
 import useNav from "@/hooks/useNav";
 
-const BuildingFeatures = forwardRef<HTMLDivElement, {}>((props) => {
+const BuildingFeatures = () => {
     const ref = useNav('features')
 
     return (
@@ -158,6 +157,6 @@ const BuildingFeatures = forwardRef<HTMLDivElement, {}>((props) => {
             </div>
         </div>
     )
-})
+}
 
 export default BuildingFeatures
