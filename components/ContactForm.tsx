@@ -108,7 +108,7 @@ export default function ContactForm() {
             <form onSubmit={onSubmit} ref={formRef}>
                 <Container className="py-24 space-y-8 max-w-prose">
                     <Supertitle className="text-white">Register for more information</Supertitle>
-                    <div className="flex lg:space-x-4">
+                    <div className="flex flex-wrap lg:flex-nowrap space-y-4 lg:space-y-0 lg:space-x-4">
                         <div className="w-full lg:w-1/2">
                             <TextInputLabel htmlFor='name'>First name *</TextInputLabel>
                             <TextInput
@@ -126,7 +126,7 @@ export default function ContactForm() {
                             />
                         </div>
                     </div>
-                    <div className="flex lg:space-x-4">
+                    <div className="flex flex-wrap lg:flex-nowrap space-y-4 lg:space-y-0 lg:space-x-4">
                         <div className="w-full lg:w-1/2">
                             <TextInputLabel htmlFor='name'>Email *</TextInputLabel>
                             <TextInput
@@ -148,7 +148,7 @@ export default function ContactForm() {
                             />
                         </div>
                     </div>
-                    <div className="flex lg:space-x-4">
+                    <div className="flex flex-wrap lg:flex-nowrap space-y-4 lg:space-y-0 lg:space-x-4">
                         <div className="w-full lg:w-1/2">
                             <TextInputLabel htmlFor='name'>Company name</TextInputLabel>
                             <TextInput
@@ -166,7 +166,7 @@ export default function ContactForm() {
                             />
                         </div>
                     </div>
-                    <div className="flex lg:space-x-4">
+                    <div className="flex space-x-4">
                         <div className="w-full lg:w-1/2">
                             <TextInputLabel htmlFor='name'>Preferred size of space (ex. 1000 sqft) *</TextInputLabel>
                             <TextInput
