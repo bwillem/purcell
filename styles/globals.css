@@ -29,8 +29,8 @@ a:hover {
   position: absolute;
   width: 32px;
   height: 24px;
-  right: 20px;
-  top: 53px;
+  right: 24px;
+  top: 44px;
 }
 
 @media (min-width: 900px) {

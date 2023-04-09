@@ -1,12 +1,12 @@
 import useNav from "@/hooks/useNav"
-import { FC, forwardRef, ReactElement } from "react"
+import { FC, ReactElement } from "react"
 import Container from "./Container"
 import H2 from "./H2"
 import Supertitle from "./Supertitle"
 import useStore from "@/store"
 
 const HeroPanel: FC<{ children: ReactElement[] }> = props =>
-    <div className="absolute top-[50%] [transform:translateY(-50%)] w-[90%] md:w-[75%] lg:w-[50%] xl:w-[40%] space-y-2 px-12 lg:px-24 py-12 bg-[rgba(0,0,0,.5)]" {...props} />
+    <div className="absolute top-[50%] left-0 md:left-auto [transform:translateY(-50%)] h-full md:h-auto w-full md:w-[75%] lg:w-[50%] xl:w-[40%] space-y-2 px-12 lg:px-24 pt-[33%] md:pt-12 md:pb-12 bg-[rgba(0,0,0,.5)]" {...props} />
 
 const HeroButton: FC<{ children: string }> = props => {
     const { setActiveLinkId } = useStore(({ activeLinkId, setActiveLinkId }) =>
@@ -34,7 +34,7 @@ function HeroSection(props: {}) {
                 backgroundSize: 'cover',
                 height: 'calc(100vh)',
             }}>
-                <Container className='px-4'>
+                <Container className='px-0 md:px-4'>
                     <HeroPanel>
                         <div className="max-w-[48px] pb-4">
                             <img alt='purcell logo icon' src='img/pb_icon.png' />
