@@ -23,14 +23,15 @@ export default async function handler(
       Messages: [{
         Sender: {
           Name: 'Purcell website',
-          Email: 'bguenther3@gmail.com',
+          Email: 'tristan@tristanchartcommercial.com',
         },
         From: {
           Name: 'Purcell website',
-          Email: 'bguenther3@gmail.com',
+          Email: 'tristan@tristanchartcommercial.com',
         },
         To: [{
-          Email: 'bguenther3@gmail.com',
+          Name: 'Purcell Business Center',
+          Email: 'tristan@tristanchartcommercial.com',
         }],
         Subject: 'New contact form submission',
         TextPart: `Name: ${body.firstname} ${body.lastname}
