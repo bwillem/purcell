@@ -48,42 +48,44 @@ function HeroSection(props: {}) {
                     </HeroPanel>
                 </Container>
             </div>
-            <div
-                className='w-full flex half-image concept relative'
-            >
-                <Container>
-                    <div className='w-full lg:w-1/2 py-24 space-y-8'>
-                        <div className='space-y-3'>
-                            <Supertitle className="text-white">
-                                Nelson, BC
-                            </Supertitle>
-                            <H2>1155 Insight Drive</H2>
-                        </div>
-                        <p className='text-white text-base max-w-[32em]'>
-                            <span className='font-bold'>Purcell Business Center </span>
-                            represents the highest quality flex industrial real estate offering in the Kootenays, comprising of 16 thoughtfully designed units ranging in size from 2,412 to 7,794 SF and featuring 22' clear heights, overhead loading doors, ample parking, mezzanine space, potential retail/office space, and excellent highway access and exposure. Redeveloped by Macdonald Communities Limited, and using local builders, tradespeople and design consultants, Purcell Business Center marks an exceptionally rate opportunity to own the most highly functional and well located industrial real estate in the Kootenays.
-                        </p>
-                        <div>
-                            <p className='text-white text-base mt-4'>
-                                <span className='font-bold'>Zoning: </span>
-                                Unzoned (suitable for a wide range of commercial uses)
-                            </p>
-                            <p className='text-white text-base mt-4'>
-                                <span className='font-bold'>Occupancy: </span>
-                                Fall 2023
-                            </p>
-                            <p className='text-white text-base'>
-                                <span className='font-bold'>Sale Price: </span>
-                                See Unit Plans
-                            </p>
-                        </div>
-                        <div>&nbsp;</div>
-                        <div className='flex'>
-                            <button className='bg-brand uppercase px-4 py-2 tracking-wide mr-4'>Download bruchure</button>
-                            <button className='bg-brand uppercase px-4 py-2 tracking-wide'>Download unit plans</button>
-                        </div>
+            <div className='w-full flex bg-primary-dark relative'>
+                <Container className='py-24 [z-index:1] space-y-8'>
+                    <div className='space-y-3'>
+                        <Supertitle className="text-white">
+                            Nelson, BC
+                        </Supertitle>
+                        <H2>1155 Insight Drive</H2>
                     </div>
+                    <p className='text-white text-base max-w-[32em]'>
+                        <span className='font-bold'>Purcell Business Center </span>
+                        represents the highest quality flex industrial real estate offering in the Kootenays, comprising of 16 thoughtfully designed units ranging in size from 2,412 to 7,794 SF and featuring 22' clear heights, overhead loading doors, ample parking, mezzanine space, potential retail/office space, and excellent highway access and exposure. Redeveloped by Macdonald Communities Limited, and using local builders, tradespeople and design consultants, Purcell Business Center marks an exceptionally rate opportunity to own the most highly functional and well located industrial real estate in the Kootenays.
+                    </p>
+                    <div>
+                        <p className='text-white text-base mt-4'>
+                            <span className='font-bold'>Zoning: </span>
+                            Unzoned (suitable for a wide range of commercial uses)
+                        </p>
+                        <p className='text-white text-base mt-4'>
+                            <span className='font-bold'>Occupancy: </span>
+                            Fall 2023
+                        </p>
+                        <p className='text-white text-base'>
+                            <span className='font-bold'>Sale Price: </span>
+                            See Unit Plans
+                        </p>
+                    </div>
+                    <div>&nbsp;</div>
+                    <div className='flex flex-wrap space-y-4 md:space-y-0'>
+                        <button className='bg-brand uppercase px-4 py-2 tracking-wide mr-4'>Download bruchure</button>
+                        <button className='bg-brand uppercase px-4 py-2 tracking-wide'>Download unit plans</button>
+                    </div>
+
                 </Container>
+                <div
+                    className="hidden lg:block absolute right-0 top-0 h-full w-full lg:w-1/2 after:[content:''] after:[top:0] after:[right:0] after:[width:100%] after:[height:100%] after:[background:rgba(0,0,0,0.5)] lg:after:[background:transparent]"
+                >
+                    <img className='h-full concept [object-fit:cover]' src='/img/purcell-business-center.png' />
+                </div>
             </div>
         </div>
     )
