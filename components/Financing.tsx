@@ -22,7 +22,7 @@ const Financing = forwardRef<HTMLDivElement, {}>((props) => {
                             Vendor-take-back financing options may also be available to you. For vendor-financing inquiries, please contact:
                         </p>
                         <p>
-                            Tristan Chart, CFA<br />Fair Realty Commercial<br />250.777.7493<br />tristan@tristanchartcommercial.com
+                            Tristan Chart, CFA<br />RLK Commercial<br />250.777.7493<br />tristan@tristanchartcommercial.com
                         </p>
                     </div>
                     <div className="lg:pl-16 lg:w-1/2 space-y-4">

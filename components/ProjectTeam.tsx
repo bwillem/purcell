@@ -28,7 +28,7 @@ const ProjectTeam = forwardRef<HTMLDivElement, {}>((props) => {
                 </div>
                 <div className="flex flex-wrap space-y-4 lg:space-y-0 lg:space-x-12">
                     <div className="w-full lg:w-1/4 max-w-[168px]">
-                        <img src='/img/fair-logo.png' />
+                        <img src='/img/royal-lepage-logo.png' />
                     </div>
                     <div className="w-full lg:w-3/4 space-y-4">
                         <H4>

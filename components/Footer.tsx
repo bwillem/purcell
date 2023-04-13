@@ -42,7 +42,7 @@ function Footer() {
                     </div>
                     <div className="w-1/2 lg:w-1/4">
                         <div className="max-w-[200px]">
-                            <img src='/img/fair-logo.png' />
+                            <img src='/img/royal-lepage-logo.png' />
                         </div>
                     </div>
                 </Container>
