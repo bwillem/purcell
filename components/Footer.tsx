@@ -12,7 +12,7 @@ function Footer() {
         <>
             <div className="bg-primary-dark">
                 <Container className='py-24 flex flex-wrap'>
-                    <div className="w-1/2 lg:w-1/4">
+                    <div className="w-1/2 lg:w-1/4 mb-8">
                         <Supertitle className='text-white pb-4'>Contact</Supertitle>
                         <p className='text-white font-bold'>Tristan Chart, CFA</p>
                         <p className='text-white text-bold'>Fair Realty Commerical</p>

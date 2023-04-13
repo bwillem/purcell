@@ -75,9 +75,19 @@ function HeroSection(props: {}) {
                         </p>
                     </div>
                     <div>&nbsp;</div>
-                    <div className='flex flex-wrap space-y-4 md:space-y-0'>
-                        <button className='bg-brand uppercase px-4 py-2 tracking-wide mr-4'>Download bruchure</button>
-                        <button className='bg-brand uppercase px-4 py-2 tracking-wide'>Download unit plans</button>
+                    <div className='flex flex-col md:flex-row space-y-4 md:space-y-0'>
+                        <a
+                            href='/purcell-brochure.pdf'
+                            download
+                            className='text-center w-full md:w-auto bg-brand uppercase px-4 py-2 tracking-wide mr-4'>
+                            Download bruchure
+                        </a>
+                        <a
+                            href='/purcell-unit-plans.pdf'
+                            download
+                            className='text-center w-full md:w-auto bg-brand uppercase px-4 py-2 tracking-wide'>
+                            Download unit plans
+                        </a>
                     </div>
 
                 </Container>
