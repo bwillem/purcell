@@ -13,7 +13,7 @@ const Location = forwardRef<HTMLDivElement, {}>((props) => {
             <div className='w-full lg:flex lg:relative h-auto lg:h-[660px]'>
                 <div className='hidden lg:block w-1/2'>
                 </div>
-                <div className='hidden lg:block w-1/2'>
+                <div className='[z-index:1] hidden lg:block w-1/2'>
                     <Map />
                 </div>
                 <Container className='py-24 lg:py-0 block lg:absolute lg:[transform:translate(-50%,100px)] lg:[left:50%]'>
