@@ -83,7 +83,7 @@ const Location = forwardRef<HTMLDivElement, {}>((props) => {
                                 <p className='text-white'>Osoyoos — 3 hrs</p>
                                 <p className='text-white'>Spokane, WA — 3 hrs 15 mins</p>
                                 <p className='text-white'>Kelowna — 3 hrs 30 mins</p>
-                                <p className='text-white'>Kamploops — 5 hrs 30 mins</p>
+                                <p className='text-white'>Kamloops — 5 hrs 30 mins</p>
                                 <p className='text-white'>Calgary — 6 hrs 30 mins</p>
                                 <p className='text-white'>Vancouver — 7 hrs</p>
                             </div>

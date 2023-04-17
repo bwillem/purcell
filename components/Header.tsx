@@ -55,7 +55,7 @@ const MobileLink: FC<{ id: string, children: string }> = ({ id, ...rest }) => {
 }
 
 const Wordmark: FC = () =>
-  <img alt='purcell business center logo' src='/img/purcell_logo.png' />
+  <img alt='purcell business centre logo' src='/img/purcell_logo.png' />
 
 function Header() {
   return (

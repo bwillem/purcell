@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Purcell Business Center</title>
-        <meta name="description" content="Purcell Business Center | Nelson, BC" />
+        <title>Purcell Business Centre</title>
+        <meta name="description" content="Purcell Business Centre | Nelson, BC" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
       </Head>

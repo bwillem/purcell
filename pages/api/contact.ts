@@ -30,7 +30,7 @@ export default async function handler(
           Email: 'tristan@tristanchartcommercial.com',
         },
         To: [{
-          Name: 'Purcell Business Center',
+          Name: 'Purcell Business Centre',
           Email: 'tristan@tristanchartcommercial.com',
         }],
         Subject: 'New contact form submission',

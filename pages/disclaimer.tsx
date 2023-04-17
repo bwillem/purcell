@@ -182,8 +182,8 @@ export default function Terms() {
     return (
         <>
             <Head>
-                <title>Purcell Business Center | Legal</title>
-                <meta name="description" content="Purcell Business Center | Nelson, BC | Legal" />
+                <title>Purcell Business Centre | Legal</title>
+                <meta name="description" content="Purcell Business Centre | Nelson, BC | Legal" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>

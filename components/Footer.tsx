@@ -15,7 +15,7 @@ function Footer() {
                     <div className="w-1/2 lg:w-1/4 mb-8">
                         <Supertitle className='text-white pb-4'>Contact</Supertitle>
                         <p className='text-white font-bold'>Tristan Chart, CFA</p>
-                        <p className='text-white text-bold'>Fair Realty Commerical</p>
+                        <p className='text-white text-bold'>Royal Lepage Kelowna Commercial</p>
                         <p className='text-white text-bold'>250-777-7493</p>
                         <p className='text-white text-bold'>tristan@tristanchartcommercial.com</p>
                         <div className='flex space-x-4 mt-2'>

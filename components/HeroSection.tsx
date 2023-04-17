@@ -57,8 +57,8 @@ function HeroSection(props: {}) {
                         <H2>1155 Insight Drive</H2>
                     </div>
                     <p className='text-white text-base max-w-[32em]'>
-                        <span className='font-bold'>Purcell Business Center </span>
-                        represents the highest quality flex industrial real estate offering in the Kootenays, comprising of 16 thoughtfully designed units ranging in size from 2,412 to 7,794 SF and featuring 22' clear heights, overhead loading doors, ample parking, mezzanine space, potential retail/office space, and excellent highway access and exposure. Redeveloped by Macdonald Communities Limited, and using local builders, tradespeople and design consultants, Purcell Business Center marks an exceptionally rate opportunity to own the most highly functional and well located industrial real estate in the Kootenays.
+                        <span className='font-bold'>Purcell Business Centre </span>
+                        represents the highest quality flex industrial real estate offering in the Kootenays, comprising 16 thoughtfully designed units ranging in size from 2,412 to 7,794 SF and featuring 22' clear heights, overhead loading doors, ample parking, mezzanine space, potential retail/office space, and excellent highway access and exposure. Redeveloped by Macdonald Communities Limited, and using local builders, tradespeople and design consultants, Purcell Business Centre marks an exceptionally rare opportunity to own the most highly functional and well located industrial real estate in the Kootenays.
                     </p>
                     <div>
                         <p className='text-white text-base mt-4'>

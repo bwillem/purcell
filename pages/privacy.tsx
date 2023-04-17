@@ -259,8 +259,8 @@ export default function Privacy() {
     return (
         <>
             <Head>
-                <title>Purcell Business Center | Privacy</title>
-                <meta name="description" content="Purcell Business Center | Nelson, BC | Privacy" />
+                <title>Purcell Business Centre | Privacy</title>
+                <meta name="description" content="Purcell Business Centre | Nelson, BC | Privacy" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>

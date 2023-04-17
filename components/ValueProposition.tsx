@@ -49,7 +49,7 @@ const ValueProposition = forwardRef<HTMLDivElement, {}>((props) => {
                     </div>
                 </div>
             </Container>
-            <div className='h-[633px] lg:h-[800px] relative concept' style={{
+            <div className='h-[633px] lg:h-[800px] relative' style={{
                 backgroundImage: `url(/img/purcell-birds-eye.jpg)`,
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center',

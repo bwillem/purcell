@@ -84,7 +84,7 @@ const BuildingFeatures = () => {
                                     Washroom: One finished bathroom per unit
                                 </Li>
                                 <Li>
-                                    Storefront: One highway-faceing main unit entrance per unit
+                                    Storefront: One highway-facing main unit entrance per unit
                                 </Li>
                             </Ul>
                         </div>
