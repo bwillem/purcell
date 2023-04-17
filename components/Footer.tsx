@@ -32,8 +32,8 @@ function Footer() {
                     </div>
                     <div className="w-1/2 lg:w-1/4">
                         <Supertitle className='text-white pb-4'>Resources</Supertitle>
-                        <FooterLink href='/purcell-brochure' download>Download Brochure</FooterLink>
-                        <FooterLink href='/purcell-unit-plans' download>Download Unit Plans</FooterLink>
+                        <FooterLink href='/purcell-brochure.pdf' download>Download Brochure</FooterLink>
+                        <FooterLink href='/purcell-unit-plans.pdf' download>Download Unit Plans</FooterLink>
                     </div>
                     <div className="w-1/2 lg:w-1/4">
                         <div className="max-w-[232px]">
