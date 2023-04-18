@@ -7,8 +7,8 @@ const mj = mailjet.apiConnect(
   {},
 )
 
-const sendTo = 'bguenther3@gmail.com'
-// const sendTo = 'tristan@tristanchartcommercial.com'
+// const sendTo = 'bguenther3@gmail.com'
+const sendTo = 'tristan@tristanchartcommercial.com'
 
 type Data = {
   data: string
@@ -46,7 +46,7 @@ Company: ${body.company}
 Country: ${body.country}
 Preferred size: ${body.size}
 How did you hear of us?: ${body.how}
-Are you a broken?: ${body.broker}
+Are you a broker?: ${body.broker}
 Opt-in consent: ${body.optin}`,
       }],
     }

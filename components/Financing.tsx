@@ -1,10 +1,9 @@
 import useNav from "@/hooks/useNav"
-import { forwardRef } from "react"
 import Container from "./Container"
 import H3 from "./H3"
 import Supertitle from "./Supertitle"
 
-const Financing = forwardRef<HTMLDivElement, {}>((props) => {
+const Financing = () => {
     const ref = useNav('financing')
 
     return (
@@ -38,6 +37,6 @@ const Financing = forwardRef<HTMLDivElement, {}>((props) => {
             </Container>
         </>
     )
-})
+}
 
 export default Financing

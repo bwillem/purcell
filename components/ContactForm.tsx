@@ -80,7 +80,6 @@ export default function ContactForm() {
     const ref = useNav('register')
 
     const onSubmit = handleSubmit(async values => {
-        console.log('values', values)
         setLoading(true)
         try {
             const r = await fetch('/api/contact', {
@@ -194,11 +193,11 @@ export default function ContactForm() {
                     <div>
                         <TextInputLabel>Are you a broker?</TextInputLabel>
                         <div className="flex space-x-2 items-center pointer">
-                            <input id='yes' type='radio' {...register('broker')} />
+                            <input id='yes' value='yes' type='radio' {...register('broker')} />
                             <Label className='pb-0' htmlFor='yes'>Yes</Label>
                         </div>
                         <div className="flex space-x-2 items-center pointer">
-                            <input id='no' type='radio' {...register('broker')} />
+                            <input id='no' value='no' type='radio' {...register('broker')} />
                             <Label className='pb-0' htmlFor='no'>No</Label>
                         </div>
                     </div>
