@@ -7,6 +7,9 @@ const mj = mailjet.apiConnect(
   {},
 )
 
+const sendTo = 'bguenther3@gmail.com'
+// const sendTo = 'tristan@tristanchartcommercial.com'
+
 type Data = {
   data: string
 }
@@ -23,18 +26,20 @@ export default async function handler(
       Messages: [{
         Sender: {
           Name: 'Purcell website',
-          Email: 'tristan@tristanchartcommercial.com',
+          Email: sendTo,
         },
         From: {
           Name: 'Purcell website',
-          Email: 'tristan@tristanchartcommercial.com',
+          Email: sendTo,
         },
         To: [{
           Name: 'Purcell Business Centre',
-          Email: 'tristan@tristanchartcommercial.com',
+          Email: sendTo,
         }],
-        Subject: 'New contact form submission',
-        TextPart: `Name: ${body.firstname} ${body.lastname}
+        Subject: 'New registration',
+        TextPart: `New registration from purcellbusinesscentre.com
+
+Name: ${body.firstname} ${body.lastname}
 Email: ${body.email}
 Phone: ${body.phone}
 Company: ${body.company}
