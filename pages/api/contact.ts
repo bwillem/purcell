@@ -43,7 +43,7 @@ Name: ${body.firstname} ${body.lastname}
 Email: ${body.email}
 Phone: ${body.phone}
 Company: ${body.company}
-Country: ${body.country}
+City: ${body.city}
 Preferred size: ${body.size}
 How did you hear of us?: ${body.how}
 Are you a broker?: ${body.broker}

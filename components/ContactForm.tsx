@@ -157,11 +157,11 @@ export default function ContactForm() {
                             />
                         </div>
                         <div className="w-full lg:w-1/2">
-                            <TextInputLabel htmlFor='name'>Country *</TextInputLabel>
+                            <TextInputLabel htmlFor='name'>City *</TextInputLabel>
                             <TextInput
                                 hasError={Boolean(errors['firstname'])}
-                                placeholder='Country...'
-                                {...register('country')}
+                                placeholder='City...'
+                                {...register('city')}
                             />
                         </div>
                     </div>
