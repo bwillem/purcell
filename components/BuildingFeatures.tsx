@@ -27,7 +27,7 @@ const BuildingFeatures = () => {
                                     Zoning: Unzoned
                                 </Li>
                                 <Li>
-                                    Building Code Standard: F2, F3 and A2 uses
+                                    Building Code Standard: F2 and A2 uses
                                 </Li>
                                 <Li>
                                     Contruction: Structural steel frame, insulated walls and ceilings
