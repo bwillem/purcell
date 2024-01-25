@@ -67,7 +67,7 @@ function HeroSection(props: {}) {
                         </p>
                         <p className='text-white text-base mt-4'>
                             <span className='font-bold'>Occupancy: </span>
-                            Late Winter 2023
+                            Spring 2024
                         </p>
                         <p className='text-white text-base'>
                             <span className='font-bold'>Sale Price: </span>
