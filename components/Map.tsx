@@ -3,7 +3,7 @@ import { GoogleMap, LoadScript } from '@react-google-maps/api'
 function Map() {
     return (
         <LoadScript
-            googleMapsApiKey='AIzaSyBccxC9_g6Xzy1oWQnNadPBOYi1Z9VuuLM'
+            googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY!}
         >
             <GoogleMap
                 mapContainerStyle={{ height: '100%', width: '100%' }}
