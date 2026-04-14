@@ -45,7 +45,7 @@ const Ownership = forwardRef<HTMLDivElement, {}>(props => {
             <div
                 className='relative before:absolute before:[left:0] before:w-full before:h-full before:[background:rgba(0,0,0,.5)] before:[content:""]'
                 style={{
-                    backgroundImage: `url(/img/purcell-business-center-wide.png)`,
+                    backgroundImage: `url(/2026/042p-AD0624_00268.jpg)`,
                     backgroundRepeat: 'no-repeat',
                     backgroundPosition: 'center',
                     backgroundSize: 'cover',
@@ -81,7 +81,7 @@ const Ownership = forwardRef<HTMLDivElement, {}>(props => {
                     </div>
                     <div className="hidden lg:block lg:w-1/2">
                         <div className="max-w-[24em] mx-auto relative concept">
-                            <img src='/img/purcell-entrance.jpg' />
+                            <img src='/2026/d0ee682f-4d43-6003-30fb-ce63efc26fe0.jpg' />
                         </div>
                     </div>
                 </Container>

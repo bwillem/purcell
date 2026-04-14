@@ -30,7 +30,7 @@ function HeroSection(props: {}) {
     return (
         <div ref={ref} id='home-section'>
             <div className='relative concept' style={{
-                backgroundImage: 'url(/img/purcell-hero.jpg)',
+                backgroundImage: 'url(/2026/IMG_0515.jpg)',
                 backgroundSize: 'cover',
                 height: 'calc(100vh)',
             }}>
@@ -94,7 +94,7 @@ function HeroSection(props: {}) {
                 <div
                     className="hidden lg:block absolute right-0 top-0 h-full w-full lg:w-1/2 after:[content:''] after:[top:0] after:[right:0] after:[width:100%] after:[height:100%] after:[background:rgba(0,0,0,0.5)] lg:after:[background:transparent]"
                 >
-                    <img className='h-full concept [object-fit:cover]' src='/img/purcell-business-center.png' />
+                    <img className='h-full concept [object-fit:cover]' src='/2026/039p-AD0624_00243.jpg' />
                 </div>
             </div>
         </div>
