@@ -91,7 +91,7 @@ const BuildingFeatures = () => {
                     </div>
                 </Container>
             </div>
-            <div className='h-[400px] concept relative' style={{
+            <div className='h-[400px] relative' style={{
                 backgroundImage: `url(/2026/Interior.jpg)`,
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center',
